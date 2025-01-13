@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+#WebJETEditorBody {
+    
+}
+
+.is-edit-mode {
+    .pb-autoaccordion {
+        .md-accordion-item {
+            .collapse {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.ly-header {
+    section {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        nav.navbar {
+            padding: 13px 24px;
+
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+.navbar {
+    &-brand {
+        img {
+            max-width: 200px;
+        }
+    }
+    & > li {
+        position: relative;
+    }
+}
+
+ul.navbar-nav.other-languages {
+    flex-direction: row;
+    li a {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+body.is-edit-mode .ly-page-wrapper nav.navbar {
+    div.pb-col-12 {
+        height: 100%;
+        div.column-content {
+            height: 100%;
+        }
+    }
+}

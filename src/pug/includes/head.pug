@@ -1,0 +1,43 @@
+meta(http-equiv='X-UA-Compatible' content='IE=edge')
+meta(charset="utf-8" data-th-charset='${ninja.temp.charset}')
+meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+meta(http-equiv="Content-type" content="text/html;charset=utf-8" data-th-content='|text/html;charset=${ninja.temp.charset}|')
+
+title(data-th-text='|${docDetails.title} - ${ninja.temp.group.siteName}|') Bare template
+
+meta(name='description' content="WebJET CMS" data-th-content='${ninja.page.seoDescription}')
+meta(name='author', content="InterWay" data-th-content='${ninja.temp.group.author}')
+meta(name='developer', content="InterWay" data-th-content='${ninja.temp.group.developer}')
+meta(name='generator', content="WebJET CMS" data-th-content='${ninja.temp.group.generator}')
+meta(name='copyright', content="InterWay" data-th-content='${ninja.temp.group.copyright}')
+meta(name='robots', content="noindex" data-th-content='${ninja.page.robots}')
+
+meta(property='og:title' content="WebJET CMS" data-th-content='${ninja.page.seoTitle}')
+meta(property='og:description' content="WebJET CMS" data-th-content='${ninja.page.seoDescription}')
+meta(property='og:url' content="http://webjetcms.sk" data-th-content='${ninja.page.url}')
+meta(property='og:image' content="assets/images/og-webjet.png" data-th-content='|${ninja.page.urlDomain}${ninja.page.seoImage}|')
+meta(property='og:site_name' content="WebJET CMS" data-th-content='${ninja.temp.group.siteName}')
+meta(property='og:type' content='website')
+meta(property='og:locale' content="sk-SK" data-th-content='${ninja.temp.lngIso}')
+
+link(rel='icon' href="assets/images/favicon.ico" data-th-href='|${ninja.temp.basePathImg}favicon.ico|' sizes='any')
+link(rel='icon' href="assets/images/favicon.svg" data-th-href='|${ninja.temp.basePathImg}favicon.svg|' type='image/svg+xml')
+
+link(rel='canonical' data-th-href='${ninja.page.url}')
+link(data-th-if="${docDetails.tempName == 'Blog template'}" rel='amphtml' data-th-href='|${ninja.page.url}?forceBrowserDetector=amp|')
+
+touchicons(data-th-utext='${ninja.temp.insertTouchIconsHtml}' data-th-remove="tag")
+    <link rel="apple-touch-icon-precomposed" href="assets/images/touch-icon.png" />
+
+combine(
+    basePath='|${ninja.temp.basePath}|',
+    data-iwcm-combine="${ninja.userAgent.blind ? 'css/blind-friendly.min.css' : ''}\n"+
+    "${ninja.webjet.pageFunctionsPath}"
+)
+    <link href="css/ninja.min.css" rel="stylesheet" type="text/css"/>
+    <script src="js/ninja.js" type="text/javascript"></script>
+
+write(data-iwcm-write="group_htmlhead_recursive" data-iwcm-remove="tag")
+write(data-iwcm-write="html_head" data-iwcm-remove="tag")
+write(data-iwcm-script="header" data-iwcm-remove="tag")
+

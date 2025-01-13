@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+//WJ DIR
+$wj-install-name : "bare";
+$wj-template-name : "bootstrap-bare";
+$wj-assets : "/templates/#{$wj-install-name}/#{$wj-template-name}/dist/";
+$wj-images : "#{$wj-assets}assets/images/";
+$wj-fonts : "#{$wj-assets}assets/fonts/";
+
+//BREAKPOINT
+$bp-dinosaur : 576px;
+$bp-mobile : 768px;
+$bp-tablet : 992px;
+$bp-laptop : 1200px;
+$bp-desktop : 1600px;
+
+//BASIC COLOR PALLETE
+$c-selection-bg: DodgerBlue;
+$c-primary: #bada55;
+
+//WIDTH
+//$w-element-name:1px;
+
+//HEIGHT
+//$h-element-name:1px;
+
+//PADDING
+//$p-element-name:1px;
+
+//MARGIN
+//$m-element-name:1px;
+
+//Z-INDEX
+//$z-element-name: 1;

@@ -1,0 +1,20 @@
+.col-md-6
+    .column-content
+        div(data-iwcm-write="!INCLUDE(/components/formsimple/form.jsp, formName=&quot;Bare - example&quot;, editorData=JTVCJTdCJTIyZmllbGRUeXBlJTIyOiUyMm1lbm8lMjIsJTIybGFiZWwlMjI6JTIyJTIyLCUyMnBsYWNlaG9sZGVyJTIyOiUyMiUyMiwlMjJyZXF1aXJlZCUyMjp0cnVlLCUyMnRvb2x0aXAlMjI6JTIyJTIyJTdELCU3QiUyMmZpZWxkVHlwZSUyMjolMjJlbWFpbCUyMiwlMjJsYWJlbCUyMjolMjJFbWFpbCUyMiwlMjJwbGFjZWhvbGRlciUyMjolMjIlMjIsJTIycmVxdWlyZWQlMjI6dHJ1ZSwlMjJ0b29sdGlwJTIyOiUyMiUyMiU3RCwlN0IlMjJmaWVsZFR5cGUlMjI6JTIydGVsZWZvbiUyMiwlMjJsYWJlbCUyMjolMjIlMjIsJTIycGxhY2Vob2xkZXIlMjI6JTIyJTIyLCUyMnJlcXVpcmVkJTIyOmZhbHNlLCUyMnRvb2x0aXAlMjI6JTIyJTIyJTdELCU3QiUyMmZpZWxkVHlwZSUyMjolMjJwb3puYW1rYSUyMiwlMjJsYWJlbCUyMjolMjJTcHIlQzMlQTF2YSUyMiwlMjJwbGFjZWhvbGRlciUyMjolMjIlMjIsJTIycmVxdWlyZWQlMjI6ZmFsc2UsJTIydG9vbHRpcCUyMjolMjIlMjIlN0QsJTdCJTIyZmllbGRUeXBlJTIyOiUyMm9kb3NsYXQlMjIsJTIybGFiZWwlMjI6JTIyJTIyLCUyMnBsYWNlaG9sZGVyJTIyOiUyMiUyMiwlMjJyZXF1aXJlZCUyMjpmYWxzZSwlMjJ0b29sdGlwJTIyOiUyMiUyMiU3RCU1RA==)!")
+            form#formMailForm-ampquotbare-exampleampquot(action='' method='post' name='formMailForm-ampquotbare-exampleampquot')
+                .form-group
+                    label.standardLabel(for='meno') Meno *
+                    input#meno.required.form-control.inputtext(data-name='Meno' name='meno' type='text' maxlength='20' placeholder='Meno *' title='povinné pole')
+                    .help-block.cs-error.cs-error-meno
+                .form-group
+                    label.standardLabel(for='telefon') Telefón
+                    input#telefon.phoneNumber.form-control.inputtext(data-name='Telefon' name='telefon' type='text' maxlength='14' placeholder='Telefon')
+                    .help-block.cs-error.cs-error-telefon
+                .form-group
+                    label.standardLabel(for='sprava') Správa
+                    textarea#sprava.form-control.inputtextarea(data-name='Sprava' name='sprava' placeholder='Sprava')
+                .form-group.sender
+                    .row
+                        .col-6.required-info * Označené polia sú povinné
+                        .col-6.text-end
+                            input.btn.btn-primary(onclick="return invokeWJAjax('formMailForm-ampquotbare-exampleampquot', 'ajaxFormResultContainer', 'bSubmit', '/FormMailAjax.action');" type='submit' value='Odoslat')

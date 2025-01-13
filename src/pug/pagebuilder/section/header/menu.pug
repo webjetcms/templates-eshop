@@ -1,0 +1,44 @@
+section
+    div.container
+        div.row.m-0
+            nav.navbar.navbar-expand-lg.navbar-light.bg-light
+
+                div.pb-col-auto
+                    p
+                        a.navbar-brand(href='/')
+                            img.fixedSize-200-40-2(src='/templates/bare/bootstrap-bare/dist/assets/cms_black.svg' height="40")
+                        button.navbar-toggler(aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' data-bs-target='#navbarSupportedContent' data-bs-toggle='collapse' type='button')
+                            span.navbar-toggler-icon
+
+                div.pb-col-auto.flex-grow-1
+                    div#navbarSupportedContent.collapse.navbar-collapse
+                        ul.nav.navbar-nav(data-iwcm-write="!INCLUDE(/components/menu/menu_ul_li.jsp, rootGroupId=1, startOffset=0, maxLevel=2, menuIncludePerex=false, classes=bootstrap, generateEmptySpan=false, openAllItems=true, onlySetVariables=false, rootUlId=menu, menuInfoDirName=)!")
+                            li.nav-item.dropdown
+                                a.nav-link.dropdown-toggle(href='/produkty/' id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false") Produkty
+                                ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-cms/') WebJET CMS
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-net/') WebJET NET
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-msg/') WebJET MSG
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-lms/') WebJET LMS
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-dsk/') WebJET DSK
+                                    li.nav-item
+                                        a.nav-link(href='/produkty/webjet-dms/') WebJET DMS
+
+                            li.nav-item
+                                a.nav-link(href='/domov/') Detail
+                            li.nav-item
+                                a.nav-link(href='/blog/') Blog
+                            li.nav-item
+                                a.nav-link(href='/kontakt/') Kontakt
+
+                div.pb-col-auto
+                    ul.navbar-nav.other-languages(data-iwcm-write="!INCLUDE(/components/structuremirroring/language_switcher.jsp)!")
+                        li.nav-item
+                            a.nav-link(href="/sk/") SK
+                        li.nav-item
+                            a.nav-link(href="/en/") EN

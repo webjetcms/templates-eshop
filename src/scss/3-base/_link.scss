@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+a {
+    &.btn.more-info {
+        /* editor */
+        font-size: 150%;
+        background-color: var(--bs-orange);
+        color: var(--bs-white);
+    }
+}

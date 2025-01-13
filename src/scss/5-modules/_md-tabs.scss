@@ -1,0 +1,33 @@
+.is-edit-mode {
+    .md-tabs {
+        .tab-content {
+            .pb-tab-title {
+                display: block;
+            }
+        }
+    }
+}
+.md-tabs {
+    .tabsBox {
+        .nav-item {
+            .nav-link {
+
+            }
+        }
+    }
+    .tab-content {
+        .pb-tab-title {
+            display: none;
+            padding: 15px 0;
+            border: 1px dashed red;
+            h3 {
+                font-size: 15px;
+                color: red;
+            }
+        }
+        .column-content {
+            min-height: 100px;
+            padding: 20px 0;
+        }
+    }
+}

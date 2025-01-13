@@ -1,0 +1,31 @@
+doctype html
+html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-th-data-browser-name="${ninja.userAgent.browserName}" data-th-data-browser-version="${ninja.userAgent.browserVersion}" data-th-data-device-type="${ninja.userAgent.deviceType}" data-th-data-device-os="${ninja.userAgent.deviceOS}")
+    head
+        include includes/head.pug
+        include mixins
+    body
+
+        div(class="ly-page-wrapper")
+            //header
+            header.ly-header(data-iwcm-write="doc_header")
+                <!-- header - toto je len ukazka pre npm run start, vo WebJETe sa nahradi za obsah hlavicky -->
+                include pagebuilder/section/header/menu.pug
+
+            //main content
+            main.ly-content-wrapper(data-iwcm-write="doc_data")
+                <!-- content - toto je len ukazka pre npm run start, vo WebJETe sa nahradi za obsah stranky -->
+
+                include pagebuilder/section/slider/hp-slider-section
+
+                include pagebuilder/section/tabs/tabs
+
+                include pagebuilder/section/accordion/accordion
+
+                include pagebuilder/section/form/form-with-text
+
+                include pagebuilder/section/cards/cards
+
+            //footer
+            footer.flex-shrink-0.ly-footer(data-iwcm-write="doc_footer")
+                <!-- footer - toto je len ukazka pre npm run start, vo WebJETe sa nahradi za obsah paticky -->
+                include pagebuilder/section/footer/footer

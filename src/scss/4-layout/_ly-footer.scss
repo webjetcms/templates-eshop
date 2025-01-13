@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.ly-footer {
+    background: #212529;
+    color: #6c757d;
+
+    a {
+        color: #6c757d;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

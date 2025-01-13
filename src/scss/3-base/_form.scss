@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+form {
+    &[name^='formMailForm'], &[name*=' formMailForm'] {
+        padding: 45px 20px;
+        box-shadow: 0 0 17px -10px #000;
+        margin-bottom: 30px;
+        .form-group {
+            margin-bottom: 15px;
+            label {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+label {}
+
+input {}
+input[type="text"] {}
+input[type="button"] {}
+input[type="submit"] {}
+input[type="checkbox"] {}
+input[type="radio"] {}
+input[type="email"] {}
+input[type="file"] {}
+input[type="hidden"] {}
+input[type="number"] {}
+input[type="password"] {}
+
+button[type="button"] {}
+button[type="send"] {}
+
+select {}
+
+textarea {}

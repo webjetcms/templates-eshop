@@ -1,0 +1,16 @@
+section
+    .container.pb-not-container.md-tabs
+        .pb-custom-container
+            .row
+                .col-12
+                    h2(class="text-center") Nadpis nad tabmi
+        .tabsBox
+            ul#autotabs-0.nav.nav-tabs.pb-autotabs
+                li.nav-item.active
+                    a.nav-link.active.show(data-toggle='tab' role='tab' href='#autotabs-0-0') Tab 1
+                li.nav-item
+                    a.nav-link(data-toggle='tab' role='tab' href='#autotabs-0-1') Tab 2
+
+        .tab-content
+            include ../../container/tabs/tabs-active
+            include ../../container/tabs/tabs

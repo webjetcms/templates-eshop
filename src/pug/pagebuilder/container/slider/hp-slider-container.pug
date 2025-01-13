@@ -1,0 +1,14 @@
+include ../../../mixins
+
+div.container
+    div.carousel.slide(id="carouselControls__ID__" data-bs-ride='carousel')
+        div.carousel-inner.row.m-0
+            +slider-item(true, 'car')
+            +slider-item(false, 'butterfly')
+            +slider-item(false, 'library')
+        button.carousel-control-prev(data-bs-slide='prev' data-bs-target='#carouselControls__ID__' type='button')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+        button.carousel-control-next(data-bs-slide='next' data-bs-target='#carouselControls__ID__' type='button')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next

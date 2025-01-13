@@ -1,0 +1,69 @@
+{
+    "title": "Bare",
+    "name": "startbootstrap-bare",
+    "version": "5.0.7",
+    "scripts": {
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets && npm run build:fonts",
+        "build:assets": "node node_scripts/build-assets.js",
+        "build:pug": "node node_scripts/build-pug.js",
+        "build:scripts": "node node_scripts/build-scripts.js",
+        "build:scss": "node node_scripts/build-scss.js",
+        "build:fonts": "node node_scripts/build-fonts.js",
+        "clean": "node node_scripts/clean.js",
+        "start": "npm run build && node node_scripts/start.js",
+        "start:debug": "npm run build && node node_scripts/start-debug.js"
+    },
+    "description": "A basic HTML starter template for Bootstrap",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://startbootstrap.com/template/bare",
+    "bugs": {
+        "url": "https://github.com/StartBootstrap/startbootstrap-bare/issues",
+        "email": "feedback@startbootstrap.com"
+    },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (https://davidmiller.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/StartBootstrap/startbootstrap-bare.git"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.26.0",
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.11.3",
+        "jquery": "^3.7.1",
+        "jquery.cookie": "^1.4.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "autoprefixer": "10.4.20",
+        "babelify": "^10.0.0",
+        "browser-sync": "^3.0.3",
+        "browserify": "^17.0.1",
+        "chokidar": "4.0.3",
+        "concurrently": "9.1.2",
+        "copyfiles": "^2.4.1",
+        "css-minify": "^2.0.2",
+        "exorcist": "^2.0.0",
+        "postcss": "^8.4.49",
+        "prettier": "3.4.2",
+        "pug": "^3.0.3",
+        "sass": "1.77.6",
+        "shelljs": "0.8.5",
+        "uglify-js": "^3.19.3",
+        "upath": "2.0.1"
+    },
+    "overrides": {
+        "core-js": "3.32.2"
+    }
+}
