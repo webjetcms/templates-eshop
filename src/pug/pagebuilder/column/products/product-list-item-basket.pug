@@ -1,0 +1,26 @@
+div.col-md-6.col-xl-4.mb-4
+    div.card.md-product-list-item
+        // Štítky
+        div.md-product-list-item__badges
+            span.md-badge.md-badge--bigger.md-badge--new Novinka
+            span.md-badge.md-badge--bigger.md-badge--favourite Obľúbené
+            span.md-badge.md-badge--bigger.md-badge--gift + Darček
+
+        // Obrázok
+        div.md-product-list-item__image
+            img.card-img-top.p-3(src="/assets/images/iphone-big.png" alt="Produktový obrázok")
+
+        div.card-body.md-product-list-item__body
+            // Názov produktu
+            h6.card-title iPhone 15 Pro 256 GB Space Gray
+
+            // Cena a stav skladom
+            div.d-flex.mb-3.flex-column
+                span.h5 1 089,00 €
+                span.text-success Na sklade >5 ks
+                //span.text-secondary Nedostupné
+
+            // Tlačidlo
+            button.btn.btn-primary.me-2.w-100
+                i.bi.bi-cart-plus
+                |  Do košíka

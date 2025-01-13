@@ -1,0 +1,28 @@
+.md-header-top {
+    transform: translateY(100%);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    .icon-link {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 14px;
+        transition: color 0.3s;
+        line-height: 21px;
+        text-decoration: none;
+        font-family: $f-primary;
+        font-weight: 400;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+body.default {
+    .md-header-top {
+        padding: 8px 0;
+        transform: translateY(0);
+        height: auto;
+        opacity: 1;
+    }
+}

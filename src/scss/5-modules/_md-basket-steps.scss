@@ -1,0 +1,56 @@
+.md-basket-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    &__step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &__circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: $c-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        &.step-active {
+            & > .md-basket-steps__step__circle {
+                background-color: $c-primary;
+                color: $c-white;
+            }
+        }
+        &.step-done {
+            & > .md-basket-steps__step__circle {
+                background-color: $c-primary;
+                color: transparent;
+                &:before {
+                    content: "\f26e";
+                    font-family: bootstrap-icons !important;
+                    position: absolute;
+                    font-size: 24px;
+                    color: $c-white;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background: $c-body;
+                bottom: 0;
+            }
+        }
+        &__title {
+            &__text {
+                font-weight: 500;
+            }
+        }
+    }
+}

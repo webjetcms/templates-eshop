@@ -1,3 +1,31 @@
-.container
-    .row
-        include ../../column/form/form
+div.container.mb-4
+    div.d-flex.align-items-center
+        h2 Osobné údaje
+    div.row
+        include ../../column/radio-buttons/radio-group
+        include ../../column/form/input-meno
+        include ../../column/form/input-firma
+        include ../../column/form/input-ico
+        include ../../column/form/input-dic
+        include ../../column/form/input-icdph
+        include ../../column/form/input-priezvisko
+        include ../../column/form/input-email
+        include ../../column/form/input-phone
+div.container.mb-4
+    div.d-flex.align-items-center
+        h2 Fakturačná adresa
+    div.row
+        include ../../column/form/input-ulica
+        include ../../column/form/input-mesto
+        include ../../column/form/input-psc
+        include ../../column/form/input-phone
+        include ../../column/form/select
+div.container.mb-4
+    div.d-flex.align-items-center
+        h2 Doručovacia adresa
+    div.row
+        include ../../column/form/check
+        include ../../column/form/input-ulica
+        include ../../column/form/input-mesto
+        include ../../column/form/input-psc
+        include ../../column/form/select

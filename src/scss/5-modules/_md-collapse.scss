@@ -1,0 +1,20 @@
+.md-collapse {
+    &__title {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            content: '\F22C';
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            font-size: 17px;
+            display: inline-block;
+            right: -25px;
+        }
+    }
+    &__text {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

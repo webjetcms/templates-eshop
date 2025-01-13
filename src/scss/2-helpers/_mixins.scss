@@ -1,1 +1,13 @@
 @charset "UTF-8";
+
+// Mixin na generovanie tried pre font-size
+@mixin generate-font-sizes($min, $max) {
+    @for $i from $min through $max {
+        .fs-#{$i} {
+            font-size: #{$i}px;
+        }
+    }
+}
+
+// Použitie mixinu
+@include generate-font-sizes(10, 28);

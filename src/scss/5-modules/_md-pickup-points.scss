@@ -1,0 +1,21 @@
+.md-pickup-points {
+    margin-top: -20px;
+    max-height: 440px;
+    overflow-y: auto;
+    &__item {
+        padding: 24px 10px 24px 0;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid $c-border;
+        &__content {
+            padding-left: 65px;
+            position: relative;
+        }
+        &__logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: auto;
+        }
+    }
+}

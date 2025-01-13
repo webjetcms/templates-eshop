@@ -1,0 +1,16 @@
+.sc-breadcrumb {
+    //transition: transform 0.3s;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+    padding: 0;
+}
+body.default {
+    .sc-breadcrumb {
+        padding: 10px 0;
+        height: auto;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

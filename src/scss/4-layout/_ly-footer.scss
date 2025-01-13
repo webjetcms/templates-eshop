@@ -1,17 +1,22 @@
 @charset "UTF-8";
 
 .ly-footer {
-    background: #212529;
-    color: #6c757d;
+    background: $c-white;
 
-    a {
-        color: #6c757d;
-        font-size: 0.9rem;
-        text-decoration: none;
-        transition: all 0.3s;
+    .footer-list {
+        a {
+            color: $c-secondary;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            padding: 4px 0;
+            display: inline-block;
+            line-height: 24px;
 
-        &:hover {
-            color: white;
+            &:hover,
+            &:focus {
+                color: $c-body;
+            }
         }
     }
 }

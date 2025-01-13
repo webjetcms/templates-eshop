@@ -17,8 +17,8 @@ module.exports = {
     "browser": "google chrome",
     middleware: function(req,res,next) {
         //presmerovanie plnych ciest, typicky na fonty a obrazky v CSS subore
-        if (req.url.indexOf('/templates/bare/bootstrap-bare/dist/')!=-1) {
-            let url = req.url.replace('/templates/bare/bootstrap-bare/dist/', '/');
+        if (req.url.indexOf('/templates/eshop/bootstrap-eshop/dist/')!=-1) {
+            let url = req.url.replace('/templates/eshop/bootstrap-eshop/dist/', '/');
             //console.log("Replacing URL to:", url);
             res.writeHead(301, {Location: url});
             res.end();

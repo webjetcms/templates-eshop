@@ -1,0 +1,24 @@
+.md-badge {
+    padding: 4.2px 7.8px 4.2px 7.8px;
+    border-radius: 100px;
+    background: $c-secondary;
+    color: $c-white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    &.md-badge--bigger {
+        font-size: 15px;
+        padding: 5.25px 9.75px 5.25px 9.75px;
+    }
+    &--new {
+        background: #FFC107;
+        color: $c-body;
+    }
+    &--favourite {
+        background: #0DCAF0;
+        color: $c-body;
+    }
+}

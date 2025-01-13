@@ -1,4 +1,21 @@
-.col-12
-    .column-content
-        p Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus.
-        p Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Pellentesque in ipsum id orci porta dapibus.
+ul.nav.nav-tabs(id="myTab" role="tablist")
+    li.nav-item(role="presentation")
+        button.nav-link.active(
+            id="recommend-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#recommend"
+            type="button"
+            role="tab"
+            aria-controls="recommend"
+            aria-selected="true"
+        ) Odporúčame
+    li.nav-item(role="presentation")
+        button.nav-link(
+            id="bestsellers-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#bestsellers"
+            type="button"
+            role="tab"
+            aria-controls="bestsellers"
+            aria-selected="false"
+        ) Najpredávanejšie

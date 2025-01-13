@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 //WJ DIR
-$wj-install-name : "bare";
-$wj-template-name : "bootstrap-bare";
+$wj-install-name : "eshop";
+$wj-template-name : "bootstrap-eshop";
 $wj-assets : "/templates/#{$wj-install-name}/#{$wj-template-name}/dist/";
 $wj-images : "#{$wj-assets}assets/images/";
 $wj-fonts : "#{$wj-assets}assets/fonts/";
@@ -14,9 +14,25 @@ $bp-tablet : 992px;
 $bp-laptop : 1200px;
 $bp-desktop : 1600px;
 
+//FONTS
+$f-primary: 'Helvetica Neue', sans-serif;
+
 //BASIC COLOR PALLETE
 $c-selection-bg: DodgerBlue;
-$c-primary: #bada55;
+$c-body: #212529;
+$c-primary: #0D6EFD;
+$c-secondary: #6C757D;
+$c-border: #DEE2E6;
+$c-white: #FFF;
+$c-box-bg: #E9ECEF;
+$c-light: #F8F9FA;
+$c-success: #198754;
+$c-danger: #DC3545;
+
+:root {
+    --bs-heading-color: $c-body;
+    --bs-card-border-color: $c-border;
+}
 
 //WIDTH
 //$w-element-name:1px;

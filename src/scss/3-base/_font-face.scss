@@ -2,16 +2,19 @@
 // @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=f6fa1ad5-be8a-4dfe-b622-22b71bb0bbc3&fontids=742855,742867,742849");
 
 @font-face {
-    font-family: "Asap";
-    src: url("#{$wj-fonts}Asap-Regular.ttf") format("truetype");
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueThin.otf") format("truetype");
 }
 @font-face {
-    font-family: "Asap Bold";
-    src: url("#{$wj-fonts}Asap-Bold.ttf") format("truetype");
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueRoman.otf") format("truetype");
 }
 @font-face {
-    font-family: "Asap Italic";
-    src: url("#{$wj-fonts}Asap-Italic.ttf") format("truetype");
+    font-family: "Helvetica Neue";
+    font-weight: 500;
+    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueMedium.otf") format("truetype");
 }
 @font-face {
     font-family: "bootstrap-icons";

@@ -1,0 +1,27 @@
+div.container
+    include ../../column/tab/tab
+    div.tab-content(id="myTabContent")
+        div.tab-pane.fade.show.active(
+            id="recommend"
+            role="recommend"
+            aria-labelledby="recommend-tab"
+        )
+            p.md-product-list__count 123 produktov
+            div.row
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+        div.tab-pane.fade(
+            id="bestsellers"
+            role="bestsellers"
+            aria-labelledby="bestsellers-tab"
+        )
+            p.md-product-list__count 123 produktov
+            div.row
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+                include ../../column/products/product-list-item
+

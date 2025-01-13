@@ -1,0 +1,25 @@
+div.container
+    include ../../column/tab/tab
+    div.tab-content(id="myTabContent")
+        div.tab-pane.fade.show.active(
+            id="recommend"
+            role="recommend"
+            aria-labelledby="recommend-tab"
+        )
+            div.row
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+        div.tab-pane.fade(
+            id="bestsellers"
+            role="bestsellers"
+            aria-labelledby="bestsellers-tab"
+        )
+            div.row
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+                include ../../column/products/product-list-item-basket
+

@@ -1,0 +1,101 @@
+div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel" aria-hidden="true")
+    div.modal-dialog.modal-dialog-centered.modal-xl
+        div.modal-content
+            div.modal-header
+                h5.modal-title#deliveryModalLabel Vyberte výdajné miesto
+                button.btn-close(type="button", data-bs-dismiss="modal", aria-label="Close")
+            div.modal-body
+                div.row
+                    div.col-lg-6
+                        div.mb-3
+                            label.form-label(for="pickup-search") Miesto vyzdvihnutia
+                            input.form-control#pickup-search(type="text", placeholder="PSČ, Mesto, Názov")
+                        div.mb-3
+                            div.form-check.form-check-inline
+                                input.form-check-input#packet(type="checkbox", checked)
+                                label.form-check-label(for="packet")
+                                    img.rounded(src='/assets/images/pickup/paketa.png', alt='Packeta')
+                                    | Packeta
+                            div.form-check.form-check-inline
+                                input.form-check-input#slovenskaPosta(type="checkbox", checked)
+                                label.form-check-label(for="slovenskaPosta")
+                                    img.rounded(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
+                                    | Slovenská pošta
+                        ul.nav.nav-tabs.mb-3
+                            li.nav-item
+                                a.nav-link.active(href="#nearest", data-bs-toggle="tab") Najbližšie
+                        div.tab-content
+                            div.tab-pane.fade.show.active#nearest
+                                div.list-group.md-pickup-points
+                                    // Z-BOX Partizánska
+                                    div.list-group-item.md-pickup-points__item
+                                        div.md-pickup-points__item__content
+                                            div.d-flex.flex-column
+                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/paketa-48.png', alt='Packeta')
+                                                h6.mb-1 Z-BOX Partizánska
+                                                span Partizánska 1410, Bratislava, 952 51
+                                                span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
+                                                div.md-collapse.mt-1
+                                                    span.md-collapse__title.js__collapse Otváracie hodiny výdajného miesta
+                                                    div.md-collapse__text
+                                                        d.flex.flex-column
+                                                            span Po - Pia: 08:00 - 18:00
+                                                            span Sobota: 08:00 - 12:00
+                                                            span Nedeľa: zatvorené
+                                            div.mt-2.d-flex.flex-row.justify-content-between
+                                                button.btn.btn-primary Vyzdvihnúť tu
+                                                span.fw-bold 3,99 €
+                                    // Slovenská pošta Partizánska
+                                    div.list-group-item.md-pickup-points__item
+                                        div.md-pickup-points__item__content
+                                            div.d-flex.flex-column
+                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                h6.mb-1 Slovenská pošta Partizánska
+                                                span Partizánska 124, Bratislava, 952 51
+                                                span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
+                                                div.md-collapse.mt-1
+                                                    span.md-collapse__title.js__collapse Otváracie hodiny výdajného miesta
+                                                    div.md-collapse__text
+                                                        d.flex.flex-column
+                                                            span Po - Pia: 08:00 - 18:00
+                                                            span Sobota: 08:00 - 12:00
+                                                            span Nedeľa: zatvorené
+                                            div.mt-2.d-flex.flex-row.justify-content-between
+                                                button.btn.btn-primary Vyzdvihnúť tu
+                                                span.fw-bold 2,99 €
+                                    div.list-group-item.md-pickup-points__item
+                                        div.md-pickup-points__item__content
+                                            div.d-flex.flex-column
+                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                h6.mb-1 Slovenská pošta Partizánska
+                                                span Partizánska 124, Bratislava, 952 51
+                                                span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
+                                                div.md-collapse.mt-1
+                                                    span.md-collapse__title.js__collapse Otváracie hodiny výdajného miesta
+                                                    div.md-collapse__text
+                                                        d.flex.flex-column
+                                                            span Po - Pia: 08:00 - 18:00
+                                                            span Sobota: 08:00 - 12:00
+                                                            span Nedeľa: zatvorené
+                                            div.mt-2.d-flex.flex-row.justify-content-between
+                                                button.btn.btn-primary Vyzdvihnúť tu
+                                                span.fw-bold 2,99 €
+                                    div.list-group-item.md-pickup-points__item
+                                        div.md-pickup-points__item__content
+                                            div.d-flex.flex-column
+                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                h6.mb-1 Slovenská pošta Partizánska
+                                                span Partizánska 124, Bratislava, 952 51
+                                                span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
+                                                div.md-collapse.mt-1
+                                                    span.md-collapse__title.js__collapse Otváracie hodiny výdajného miesta
+                                                    div.md-collapse__text
+                                                        d.flex.flex-column
+                                                            span Po - Pia: 08:00 - 18:00
+                                                            span Sobota: 08:00 - 12:00
+                                                            span Nedeľa: zatvorené
+                                            div.mt-2.d-flex.flex-row.justify-content-between
+                                                button.btn.btn-primary Vyzdvihnúť tu
+                                                span.fw-bold 2,99 €
+                    div.col-lg-6.d-none.d-lg-block
+                        img(src='/assets/images/map.png', alt='Mapa')

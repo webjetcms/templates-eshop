@@ -1,0 +1,91 @@
+.md-radio-options {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        &:first-child > .md-radio-options__label {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        &:last-child > .md-radio-options__label {
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        &:only-child {
+            border-radius: 8px;
+        }
+        & > .md-radio-options__label:hover {
+            border-color: $c-primary;
+        }
+    }
+    &__circle {
+        width: 16px;
+        height: 16px;
+        border: 1px solid $c-border;
+        border-radius: 50%;
+        transition: border-color 0.5s ease;
+        position: absolute;
+        left: 15px;
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+        border: 1px solid $c-border;
+        border-radius: 0;
+        padding: 1rem;
+        cursor: pointer;
+        padding-left: 45px;
+        position: relative;
+    }
+    &__radio {
+        display: none;
+
+        &:checked + .md-radio-options__label {
+            border-color: $c-primary;
+        }
+        &:checked + .md-radio-options__label .md-radio-options__circle {
+            border: 4px solid $c-primary;
+        }
+    }
+    &__icon {
+        font-size: 32px;
+        color: $c-body;
+    }
+    &__content {
+        flex-grow: 1;
+        @media  screen and (min-width: $bp-laptop){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__title {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        &__description {
+            font-size: 0.875rem;
+            color: $c-secondary;
+            margin-bottom: 8px;
+        }
+        &__button {
+            margin-top: 0.5rem;
+        }
+        &__info {
+            margin-top: 15px;
+            font-size: 0.875rem;
+            color: $c-success;
+            @media screen and (min-width: $bp-laptop) {
+                margin: 0;
+            }
+        }
+    }
+    &__price {
+        margin-top: auto;
+        font-weight: 700;
+        @media screen and (min-width: $bp-laptop) {
+            margin: auto;
+        }
+    }
+}

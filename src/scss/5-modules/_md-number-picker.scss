@@ -1,0 +1,26 @@
+.md-number-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $c-border;
+    border-radius: 5px;
+    padding: 0;
+    width: auto;
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 7px 10px;
+        i {
+            font-size: 14px;
+            color: $c-body;
+        }
+    }
+    input {
+        border: none;
+        width: 20px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $c-secondary;
+    }
+}

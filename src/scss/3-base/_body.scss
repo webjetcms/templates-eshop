@@ -3,9 +3,44 @@
 body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
-    font-family: 'Asap', sans-serif;
+    font-family: $f-primary;
+    min-width: 360px;
+    color: $c-body;
+    .scroll-d-visible {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    &.scroll-down {
+        .scroll-d-hidden {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0;
+        }
+        .scroll-d-visible {
+            height: auto;
+            opacity: 1;
+            overflow: visible;
+        }
+        .md-header-main__search {
+            margin-top: 0;
+        }
+        .search-col {
+            flex: 0 0 auto;
+            width: 83.33333333%;
+            margin: 0;
+            order: 3 !important;
+        }
+    }
 }
 
 section {
-    padding: 20px 0;
+    padding: 15px 0;
+}
+
+.divider {
+    height: 1px;
+    background: $c-border;
+    width: 100%;
 }
