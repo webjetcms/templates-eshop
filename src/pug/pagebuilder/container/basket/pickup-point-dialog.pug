@@ -10,16 +10,18 @@ div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel"
                         div.mb-3
                             label.form-label(for="pickup-search") Miesto vyzdvihnutia
                             input.form-control#pickup-search(type="text", placeholder="PSČ, Mesto, Názov")
-                        div.mb-3
-                            div.form-check.form-check-inline
-                                input.form-check-input#packet(type="checkbox", checked)
-                                label.form-check-label(for="packet")
-                                    img.rounded(src='/assets/images/pickup/paketa.png', alt='Packeta')
+                        div.mb-2.md-pickup-types
+                            div.form-check.form-check-inline.md-pickup-types__item.mb-3
+                                input.form-check-input.mt-2#packet(type="checkbox", checked)
+                                label.form-check-label.d-flex.align-items-center(for="packet")
+                                    div.md-pickup-types__item__logo.me-2
+                                        img.md-pickup-types__item__logo__img.rounded-3(src='/assets/images/pickup/paketa.png', alt='Packeta')
                                     | Packeta
-                            div.form-check.form-check-inline
-                                input.form-check-input#slovenskaPosta(type="checkbox", checked)
-                                label.form-check-label(for="slovenskaPosta")
-                                    img.rounded(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
+                            div.form-check.form-check-inline.md-pickup-types__item.mb-3
+                                input.form-check-input.mt-2#slovenskaPosta(type="checkbox", checked)
+                                label.form-check-label.d-flex.align-items-center(for="slovenskaPosta")
+                                    div.md-pickup-types__item__logo.me-2
+                                        img.md-pickup-types__item__logo__img.rounded-3(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
                                     | Slovenská pošta
                         ul.nav.nav-tabs.mb-3
                             li.nav-item
@@ -31,7 +33,8 @@ div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel"
                                     div.list-group-item.md-pickup-points__item
                                         div.md-pickup-points__item__content
                                             div.d-flex.flex-column
-                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/paketa-48.png', alt='Packeta')
+                                                div.md-pickup-points__item__logo
+                                                    img.md-pickup-points__item__logo__img.rounded-3(src='/assets/images/pickup/paketa.png', alt='Packeta')
                                                 h6.mb-1 Z-BOX Partizánska
                                                 span Partizánska 1410, Bratislava, 952 51
                                                 span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
@@ -49,7 +52,7 @@ div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel"
                                     div.list-group-item.md-pickup-points__item
                                         div.md-pickup-points__item__content
                                             div.d-flex.flex-column
-                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                img.md-pickup-points__item__logo.rounded-3(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
                                                 h6.mb-1 Slovenská pošta Partizánska
                                                 span Partizánska 124, Bratislava, 952 51
                                                 span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
@@ -66,7 +69,7 @@ div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel"
                                     div.list-group-item.md-pickup-points__item
                                         div.md-pickup-points__item__content
                                             div.d-flex.flex-column
-                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                img.md-pickup-points__item__logo.rounded-3(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
                                                 h6.mb-1 Slovenská pošta Partizánska
                                                 span Partizánska 124, Bratislava, 952 51
                                                 span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59
@@ -83,7 +86,7 @@ div.modal.fade(id="pickupPoint" tabindex="-1" aria-labelledby="pickupPointLabel"
                                     div.list-group-item.md-pickup-points__item
                                         div.md-pickup-points__item__content
                                             div.d-flex.flex-column
-                                                img.md-pickup-points__item__logo.rounded(src='/assets/images/pickup/posta-48.png', alt='Slovenská pošta')
+                                                img.md-pickup-points__item__logo.rounded-3(src='/assets/images/pickup/posta.png', alt='Slovenská pošta')
                                                 h6.mb-1 Slovenská pošta Partizánska
                                                 span Partizánska 124, Bratislava, 952 51
                                                 span.text-success.mt-2 K vyzdvihnutiu: Pondelok 20.12.2024, 00:00 - 23:59

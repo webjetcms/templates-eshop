@@ -38,6 +38,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.26.0",
+        "@fontsource/open-sans": "^5.1.1",
         "bootstrap": "^5.3.3",
         "bootstrap-icons": "^1.11.3",
         "jquery": "^3.7.1",

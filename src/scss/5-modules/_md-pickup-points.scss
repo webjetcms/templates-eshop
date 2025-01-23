@@ -16,6 +16,14 @@
             left: 0;
             top: 0;
             margin: auto;
+            width: 48px;
+            height: 48px;
+            &__img {
+                width: auto;
+                height: 100%;
+                aspect-ratio: 1;
+                object-fit: contain;
+            }
         }
     }
 }
