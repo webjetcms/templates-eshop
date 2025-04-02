@@ -1,0 +1,28 @@
+div.container
+    include ../../column/tab/product-detail-tab
+    div.tab-content(id="productDetailTabContent")
+        div.tab-pane.fade.show.active(
+            id="description"
+            role="description"
+            aria-labelledby="description-tab"
+        )
+            p.md-product-list__count Some content 1
+        div.tab-pane.fade(
+            id="parameters"
+            role="parameters"
+            aria-labelledby="parameters-tab"
+        )
+            p.md-product-list__count Some content 2
+        div.tab-pane.fade(
+            id="variants"
+            role="variants"
+            aria-labelledby="variants-tab"
+        )
+            p.md-product-list__count Some content 3
+        div.tab-pane.fade(
+            id="accessories"
+            role="accessories"
+            aria-labelledby="accessories-tab"
+        )
+            p.md-product-list__count Some content 4
+

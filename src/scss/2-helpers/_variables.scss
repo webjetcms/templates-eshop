@@ -19,15 +19,15 @@ $f-primary: "Open Sans", sans-serif;
 
 //BASIC COLOR PALLETE
 $c-selection-bg: DodgerBlue;
-$c-body: #212529;
-$c-primary: #0D6EFD;
-$c-secondary: #6C757D;
+$c-body: var(--bs-dark);
+$c-primary: var(--bs-primary);
+$c-secondary: var(--bs-secondary);
+$c-light: var(--bs-light);
+$c-success: var(--bs-success);
+$c-danger: var(--bs-danger);
 $c-border: #DEE2E6;
 $c-white: #FFF;
 $c-box-bg: #E9ECEF;
-$c-light: #F8F9FA;
-$c-success: #198754;
-$c-danger: #DC3545;
 
 :root {
     --bs-heading-color: $c-body;
