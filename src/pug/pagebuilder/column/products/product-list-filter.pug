@@ -1,0 +1,55 @@
+include ../../../mixins
+
+div.md-product-list-filter.col-md-3.col-12
+    div.filter-wrapper
+        div.filter-part.mb-4
+            p.fw-bold.mb-2
+                | Dostupnosť
+            select.form-select(aria-label="Dostupnosť")
+                option(selected) Na sklade
+                option Všetok tovar
+                option Vypredané
+        div.filter-part.mb-4
+            p.fw-bold.mb-2
+                | Stav tovaru
+            div.form-check.mb-2
+                input.form-check-input(type="radio" name="statusSwitch" id="statusSwitch1" value="all" checked)
+                label.form-check-label(for="statusSwitch1") Všetko
+            div.form-check.mb-2
+                input.form-check-input(type="radio" name="statusSwitch" value="onlyNew" id="statusSwitch2")
+                label.form-check-label(for="statusSwitch2") Iba nové
+            div.form-check.mb-2
+                input.form-check-input(type="radio" name="statusSwitch" value="onlyUnpacked" id="statusSwitch3")
+                label.form-check-label(for="statusSwitch3") Iba rozbalené
+        +rangeSlider("Cena","€", 0, 10000, 100, 2500, 7500)
+        +filter-checkboxes-group('Značka', [
+            {name: 'Apple', count: 215},
+            {name: 'Samsung', count: 122},
+            {name: 'Xiaomi', count: 11},
+            {name: 'Google', count: 12},
+            {name: 'Nokia', count: 2},
+            {name: 'TCL', count: 22},
+        ], 4)
+        +filter-checkboxes-group('Vnútorná pamäť', [
+            {name: '512 BG', count: 215},
+            {name: '1 TB', count: 122},
+            {name: '2 TB', count: 11},
+            {name: '3 TB', count: 12},
+            {name: '4 TB', count: 2},
+            {name: '5 TB', count: 22},
+        ], 3)
+        +rangeSlider("Rozlíšenie fotoaparátu","Mpx", 0, 100, 1, 25, 75)
+        +filter-checkboxes-group('Funkcie', [
+            {name: 'Funkcia 1', count: 215},
+            {name: 'Funkcia 2', count: 215},
+            {name: 'Funkcia 3', count: 215},
+        ], 99)
+        div.filter-part.mb-4
+            button.btn.btn-primary
+                | Všetky parametre
+    div.filter-action
+        button.btn.btn-link.me-auto.text-decoration-none.close-filter
+            | Zavrieť
+        button.btn.btn-primary.ms-auto.confirm-filter.close-filter
+            | Zobraziť položky
+            span (26)

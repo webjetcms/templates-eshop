@@ -6,6 +6,12 @@ div.container
             role="recommend"
             aria-labelledby="recommend-tab"
         )
+            div.d-flex.d-md-none.flex-row.mb-3
+                button.btn.btn-link.me-auto.text-decoration-none.clean-filter
+                    | Zrušiť filter
+                button.btn.btn-primary.ms-auto.open-filter
+                    i.bi.bi-filter-square.me-1
+                    | Filtrovať
             p.md-product-list__count 123 produktov
             div.row
                 include ../../column/products/product-list-item
@@ -16,6 +22,12 @@ div.container
             role="bestsellers"
             aria-labelledby="bestsellers-tab"
         )
+            div.d-flex.d-md-none.flex-row.mb-3
+                button.btn.btn-link.me-auto.text-decoration-none.clean-filter
+                    | Zrušiť filter
+                button.btn.btn-primary.ms-auto.open-filter
+                    i.bi.bi-filter-square.me-1
+                    | Filtrovať
             p.md-product-list__count 123 produktov
             div.row
                 include ../../column/products/product-list-item

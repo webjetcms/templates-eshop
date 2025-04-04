@@ -33,6 +33,16 @@ body {
             order: 3 !important;
         }
     }
+    &.body-overlay {
+    &:before {
+    content: '';
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+    }
+    }
 }
 
 section {
