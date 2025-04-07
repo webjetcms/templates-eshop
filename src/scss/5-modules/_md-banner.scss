@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.md-banner {
+    &__only-img {
+        width: 100%;
+        height: 180px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        @media (min-width: $bp-mobile) {
+            height: 380px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
