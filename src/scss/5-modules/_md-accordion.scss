@@ -1,12 +1,8 @@
 .md-accordion {
     &-item {
-        border: 1px solid #ced4da;
-        border-radius: 5px;
-        border-bottom: none;
+        border-bottom: $accordion-border-width solid $accordion-border-color;
+        border-radius: 0;
         padding: 0!important;
-        &:last-child {
-            border-bottom: 1px solid #ced4da;
-        }
         a {
             text-decoration: none;
             text-transform: none;
@@ -18,9 +14,11 @@
         &.open {
             .md-accordion-header {
                 background-color: #e7f1ff;
-                border-bottom: 1px solid #ced4da;
+                border-bottom: 1px solid $accordion-border-color;
                 &:after {
                     transform: rotate(-180deg);
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNicgZmlsbD0nIzBjNjNlNCc+PHBhdGggZmlsbC1ydWxlPSdldmVub2RkJyBkPSdNMS42NDYgNC42NDZhLjUuNSAwIDAgMSAuNzA4IDBMOCAxMC4yOTNsNS42NDYtNS42NDdhLjUuNSAwIDAgMSAuNzA4LjcwOGwtNiA2YS41LjUgMCAwIDEtLjcwOCAwbC02LTZhLjUuNSAwIDAgMSAwLS43MDh6Jy8+PC9zdmc+);
+
                 }
             }
         }
@@ -31,9 +29,9 @@
         position: relative;
         &:after {
             content: '';
-            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxNiAxNicgZmlsbD0nIzBjNjNlNCc+PHBhdGggZmlsbC1ydWxlPSdldmVub2RkJyBkPSdNMS42NDYgNC42NDZhLjUuNSAwIDAgMSAuNzA4IDBMOCAxMC4yOTNsNS42NDYtNS42NDdhLjUuNSAwIDAgMSAuNzA4LjcwOGwtNiA2YS41LjUgMCAwIDEtLjcwOCAwbC02LTZhLjUuNSAwIDAgMSAwLS43MDh6Jy8+PC9zdmc+);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
             background-size: cover;
-            content: "";
             height: 20px;
             position: absolute;
             right: 20px;
@@ -42,9 +40,6 @@
             bottom: 0;
             margin: auto;
             transition: all .4s ease;
-        }
-        p {
-            font-weight: bold;
         }
     }
     &-body {
