@@ -1,8 +1,30 @@
 div.col-md-6
-    div.card.md_complain-card
+    div.card.md_card__main.mb-3.mb-md-0
         div.card-body
             img(src='assets/images/reklamacia.svg', alt='Reklamácia')
             h3.h5.pb-editable.mt-3.mb-3 Reklamácia
             p.c-secondary Reklamáciu je nutné uplatniť bez zbytočného odkladu. V prípade, že zistíš poruchu na svojom produkte, hneď nám ho zašli.
-            a(href="#").d-block.pb-editable.mb-3 Ako reklamovať tovar krok po kroku
-            a.btn.btn-success.w-100(data-bs-toggle="modal" data-bs-target="#returnOfGoodsModal") Reklamovať
+            a.w-100.pb-editable.mb-3.d-block(href='#', role='button', data-bs-toggle='modal', data-bs-target='#complaintModal') Ako reklamovať tovar krok po kroku
+            a.btn.btn-success.w-100 Reklamovať
+
+div.modal.fade#complaintModal(tabindex='-1', aria-labelledby='complaintModal', aria-hidden='true')
+    div.modal-dialog.md-modal
+        div.modal-content
+            div.modal-header
+                div
+                    img.d-block.mb-3(src='assets/images/reklamacia.svg', alt='Vrátenie do 14 dní')
+                    h2.modal-title.fs-5#exampleModalLabel Ako vrátiť tovar krok po kroku
+                button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            div.modal-body
+                ol.md-list__ol
+                    li.pb-editable
+                        p.c-secondary Pokiaľ potrebuješ vrátiť nevyhovujúci tovar, zákon ti v prípade nákupu cez e-shop s doručením na adresu garantuje lehotu 14 dní.
+                    li.pb-editable
+                        p.c-secondary K tovaru prilož doklad o kúpe a vyplnený formulár na odstúpenie od zmluvy. Nezabudni vyplniť tvoj bankový účet, kam ti vrátime peniaze.
+                    li.pb-editable
+                        p.c-secondary Pokiaľ potrebuješ vrátiť nevyhovujúci tovar, zákon ti v prípade nákupu cez e-shop s doručením na adresu garantuje lehotu 14 dní.
+                    li.pb-editable
+                        p.c-secondary Pokiaľ potrebuješ vrátiť nevyhovujúci tovar, zákon ti v prípade nákupu cez e-shop s doručením na adresu garantuje lehotu 14 dní.
+            div.modal-footer
+                a.btn.btn-success.w-100(data-bs-toggle="modal" data-bs-target="#returnOfGoodsModal") Vrátiť tovar
+
