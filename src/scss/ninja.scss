@@ -1,6 +1,7 @@
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+
 //HELPERS
 @import "2-helpers/variables";
 @import "2-helpers/functions";
@@ -49,12 +50,14 @@
 @import "5-modules/md-product-list-categories";
 @import "5-modules/md-product-list-ranking";
 @import "5-modules/md-product-list-item";
+@import "5-modules/md-product-detail-benefits";
 @import "5-modules/md-number-picker";
 @import "5-modules/md-basket";
 @import "5-modules/md-basket-steps";
 @import "5-modules/md-basket-summary";
 @import "5-modules/md-radio-options";
 @import "5-modules/md-pickup-points";
+@import "5-modules/md-pickup-types";
 @import "5-modules/md-collapse";
 
 //PAGES

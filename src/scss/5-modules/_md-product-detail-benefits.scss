@@ -1,0 +1,26 @@
+.md-product-detail-benefits {
+    border: 1px solid $c-border;
+    border-radius: 8px;
+    padding: 40px 24px;
+    .benefit-item {
+       margin-bottom: 24px;
+       &:last-child {
+              margin-bottom: 0;
+       }
+       @media(min-width: $bp-mobile) {
+           margin-bottom: 0;
+       }
+        .icon-wrapper {
+        margin-right: 16px;
+        }
+        .benefit-text {
+        h3 {
+        font-weight: bold;
+        }
+        p {
+        font-size: 14px;
+        margin: 0;
+        }
+        }
+    }
+}

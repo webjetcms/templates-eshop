@@ -1,21 +1,8 @@
 @charset "UTF-8";
 // @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=f6fa1ad5-be8a-4dfe-b622-22b71bb0bbc3&fontids=742855,742867,742849");
 
-@font-face {
-    font-family: "Helvetica Neue";
-    font-weight: 300;
-    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueThin.otf") format("truetype");
-}
-@font-face {
-    font-family: "Helvetica Neue";
-    font-weight: 400;
-    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueRoman.otf") format("truetype");
-}
-@font-face {
-    font-family: "Helvetica Neue";
-    font-weight: 500;
-    src: url("#{$wj-fonts}Helvetica-Neue/HelveticaNeueMedium.otf") format("truetype");
-}
+@import "@fontsource/open-sans";
+
 @font-face {
     font-family: "bootstrap-icons";
     src: url("#{$wj-fonts}bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),

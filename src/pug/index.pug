@@ -8,9 +8,11 @@ html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-t
             //header
             header.ly-header(data-iwcm-write="doc_header")
                 include pagebuilder/section/header/header
-                //include pagebuilder/section/breadcrumb/breadcrumb
+                include pagebuilder/section/breadcrumb/breadcrumb
             //main content
             main.ly-content-wrapper(data-iwcm-write="doc_data")
+                //product detail
+                include pagebuilder/section/products/detail
 
                 //include all sections to quickly see all options for layout and PB blocks
 

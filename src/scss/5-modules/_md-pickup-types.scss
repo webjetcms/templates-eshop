@@ -1,0 +1,14 @@
+.md-pickup-types {
+    &__item {
+        &__logo {
+            width: 32px;
+            height: 32px;
+            &__img {
+                width: auto;
+                height: 100%;
+                aspect-ratio: 1;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -5,3 +5,14 @@ mixin slider-item(active, imgSrc)
     else
         div.carousel-item.col-12.p-0
             img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/templates/bare/bootstrap-bare/dist/assets/images/hp-slider/${imgSrc}.jpg`)
+
+mixin benefit(imgSrc, title, text)
+    div.benefit-item.col-md-3
+        div.d-flex
+            div.icon-wrapper
+                img(src=imgSrc, alt="Benefit icon")
+            div.benefit-text
+                h3.fs-6
+                    | #{title}
+                p.c-secondary
+                    | #{text}
