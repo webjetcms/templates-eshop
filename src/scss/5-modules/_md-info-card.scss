@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.md-info-card {
+    background: $c-gray-200;
+    color: $c-gray-800;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    .info-card-body {
+        padding: 32px;
+    }
+    &__image {
+        &-right {
+            .info-card-body {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .info-card-text-wrapper {
+                    width: 100%;
+                    max-width: 730px;
+                }
+                .info-card-image-wrapper {
+                    width: 100%;
+                    max-width: 250px;
+                    @media(max-width: $bp-tablet) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
