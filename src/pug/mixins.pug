@@ -16,3 +16,47 @@ mixin benefit(imgSrc, title, text)
                     | #{title}
                 p.c-secondary
                     | #{text}
+
+mixin filter-checkboxes-group(title, items, visibleItems=4)
+    div.filter-part.mb-4
+        p.fw-bold.mb-2= title
+        each item, index in items
+            div.form-check.mb-1(
+                class=index >= visibleItems ? 'd-none more-item' : ''
+            data-index=index
+            )
+                input.form-check-input(
+                    type="checkbox"
+                    value=""
+                    id=`checkbox-${title.toLowerCase()}-${index}`
+                )
+                label.form-check-label(for=`checkbox-${title.toLowerCase()}-${index}`)
+                    | #{item.name}
+                    span.c-secondary (#{item.count})
+
+        if items.length > visibleItems
+            div.mb-1
+                a.toggle-items.c-secondary.text-decoration-none(
+                    href="#"
+                    data-visible=visibleItems
+                    data-expanded="false"
+                    data-total=items.length
+                )
+                    | Ďalších
+                    span #{items.length - visibleItems}
+
+mixin rangeSlider(title, unit, min=0, max=10000, step=100, minValue=2500, maxValue=7500)
+    div.filter-part.mb-4.md-range-slider
+        p.fw-bold.mb-2= title
+        .slider
+            .progress
+        .range-input
+            input(type="range" class="range-min" min=min max=max value=minValue step=step)
+            input(type="range" class="range-max" min=min max=max value=maxValue step=step)
+        .price-input.d-flex.mt-3
+            .input-group.me-1
+                input.form-control.input-min(type="number" placeholder="Min." aria-label="Min." aria-describedby="basic-min" value=minValue)
+                span.input-group-text#basic-min= unit
+            .input-group.ms-1
+                input.form-control.input-min(type="number" placeholder="Max." aria-label="Max." aria-describedby="basic-max" value=maxValue)
+                span.input-group-text#basic-max= unit

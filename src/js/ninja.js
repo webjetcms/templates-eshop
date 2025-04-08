@@ -24,6 +24,9 @@ $(function () {
     initNumberPicker(numberPicker);
     initCollapse(collapse);
     togglePersonSwitch(personSwitch);
+    initFilterCheckboxesGroup();
+    initFilterSidenav();
+    initAllRangeInputs();
     personSwitch.trigger('change');
 });
 
@@ -109,5 +112,115 @@ function initHeaderScroll() {
         lastScrollTop = scrollTop; // aktualizuj poslednú pozíciu
         headerHeight = $('.ly-header').outerHeight();
         $('body').css('padding-top', headerHeight + 'px');
+    });
+}
+
+function initFilterCheckboxesGroup() {
+  document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('toggle-items')) {
+      e.preventDefault();
+      const toggle = e.target;
+      const container = toggle.closest('.filter-part');
+      const visibleItems = parseInt(toggle.dataset.visible);
+      const totalItems = parseInt(toggle.dataset.total);
+      const isExpanded = toggle.dataset.expanded === 'true';
+
+      if (!isExpanded) {
+        // Show all items
+        container.querySelectorAll('.more-item').forEach(item => {
+          item.classList.remove('d-none');
+        });
+        toggle.innerHTML = 'Zobraziť menej';
+        toggle.dataset.expanded = 'true';
+      } else {
+        // Collapse to initial visible items
+        container.querySelectorAll('.more-item').forEach(item => {
+          item.classList.add('d-none');
+        });
+        toggle.innerHTML = `Ďalších <span>${totalItems - visibleItems}</span>`;
+        toggle.dataset.expanded = 'false';
+      }
+    }
+  });
+}
+
+function initFilterSidenav() {
+    const filterSidenav = document.querySelector('.md-product-list-filter');
+    const filterBtnOpen = document.querySelectorAll('.open-filter');
+    const filterBtnClose = document.querySelectorAll('.close-filter');
+    const bodyEl = document.querySelector('body');
+
+    // Open filter sidebar for all open buttons
+    filterBtnOpen.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterSidenav.classList.add('filter-opened');
+            bodyEl.classList.add('body-overlay');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close filter sidebar for all close buttons
+    filterBtnClose.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterSidenav.classList.remove('filter-opened');
+            bodyEl.classList.remove('body-overlay');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close when clicking outside of the sidebar
+    document.addEventListener('click', function(event) {
+        if (!filterSidenav.contains(event.target) &&
+            ![...filterBtnOpen].some(btn => btn.contains(event.target))) {
+            filterSidenav.classList.remove('filter-opened');
+            bodyEl.classList.remove('body-overlay');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+function initAllRangeInputs() {
+    document.querySelectorAll(".md-range-slider").forEach((sliderWrapper) => {
+        const rangeInput = sliderWrapper.querySelectorAll(".range-input input"),
+            priceInput = sliderWrapper.querySelectorAll(".price-input input"),
+            range = sliderWrapper.querySelector(".slider .progress");
+        let priceGap = 0;
+
+        priceInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                    if (e.target.classList.contains("input-min")) {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+        rangeInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+
+                if (maxVal - minVal < priceGap) {
+                    if (e.target.classList.contains("range-min")) {
+                        rangeInput[0].value = maxVal - priceGap;
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
     });
 }
