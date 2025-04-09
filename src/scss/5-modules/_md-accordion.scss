@@ -13,7 +13,7 @@
         }
         &.open {
             .md-accordion-header {
-                background-color: #e7f1ff;
+                background-color: $c-primary-50;
                 border-bottom: 1px solid $accordion-border-color;
                 &:after {
                     transform: rotate(-180deg);
