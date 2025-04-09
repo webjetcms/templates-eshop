@@ -21,91 +21,14 @@ html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-t
                 include pagebuilder/section/accordion/accordion
                 // homepage
                 include pagebuilder/section/banner/image-banner
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 Najpredávanejšie
-                    div.container
-                        div.row
-                            include pagebuilder/column/products/product-list-item
-                            include pagebuilder/column/products/product-list-item-no-options
-                            include pagebuilder/column/products/product-list-item-no-options
-                //product detail
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 Posledné kusy na sklade
-                    div.container
-                        div.row
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                section
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 Jarny vypredaj
-                    div.container
-                        div.row
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                            include pagebuilder/column/products/product-list-item-small
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 To najlepšie príslušenstvo pre Váš mobil
-                    div.container
-                        div.row
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                            include pagebuilder/column/products/product-list-item-small-no-image
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 Obľúbené modely
-                    div.container
-                        div.row
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                            include pagebuilder/column/products/product-list-item-small-just-image
-                    div.container
-                        div.row
-                            div.col-md-6
-                                div.md-banner__only-img
-                                    img(src="assets/images/hero-banner-placeholder.png", alt="Hero banner", class="img-fluid" loading="lazy")
-                            div.col-md-6
-                                div.md-banner__only-img
-                                    img(src="assets/images/hero-banner-placeholder.png", alt="Hero banner", class="img-fluid" loading="lazy")
-
-
-
-                section
-                    div.container
-                        div.row
-                            div.col-12
-                                h1.text-center.mb-3 Technológie, ktoré vás dostanú
-                include pagebuilder/section/cards/info-cards
-                include pagebuilder/section/cards/info-cards-image-right
+                include pagebuilder/section/products/most-popular
+                include pagebuilder/section/products/last-on-stock
+                include pagebuilder/section/products/sale
+                include pagebuilder/section/products/best-accessories
+                include pagebuilder/section/products/favourite
+                include pagebuilder/section/products/technologies
                 //product detail
                 include pagebuilder/section/products/detail
-
                 // product list with filter
                 include pagebuilder/section/products/list-with-filter
                 //include all sections to quickly see all options for layout and PB blocks
