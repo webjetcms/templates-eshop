@@ -27,6 +27,7 @@ $(function () {
     initFilterCheckboxesGroup();
     initFilterSidenav();
     initAllRangeInputs();
+    initSectionNavigationItems();
     personSwitch.trigger('change');
 });
 
@@ -224,3 +225,31 @@ function initAllRangeInputs() {
         });
     });
 }
+
+function initSectionNavigationItems() {
+    const navContainer = document.querySelector('.md-section-navigator ul');
+    if (!navContainer) return;
+
+    navContainer.innerHTML = '';
+
+    const sections = document.querySelectorAll('section[id]');
+
+    sections.forEach(section => {
+        const id = section.id;
+        const heading = section.querySelector('h2');
+
+        if (heading) {
+            const li = document.createElement('li');
+            li.classList.add('pb-editable');
+
+            const a = document.createElement('a');
+            a.classList.add('pb-editable');
+            a.href = `#${id}`;
+            a.textContent = heading.textContent.trim();
+
+            li.appendChild(a);
+            navContainer.appendChild(li);
+        }
+    });
+}
+
