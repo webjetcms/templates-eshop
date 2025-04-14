@@ -1,0 +1,14 @@
+.sc-blog-detail {
+    max-width: 750px;
+    margin: 0 auto;
+    .blog-image {
+        max-height: 350px;
+        overflow: hidden;
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
