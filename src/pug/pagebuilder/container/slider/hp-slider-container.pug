@@ -1,14 +1,36 @@
 include ../../../mixins
 
+- var slides = [{ active: true, imgSrc: 'slider-placeholder' },{ active: false, imgSrc: 'blog-card-placeholder' },{ active: false, imgSrc: 'slider-placeholder' }];
+
 div.container
-    div.carousel.slide(id="carouselControls__ID__" data-bs-ride='carousel')
-        div.carousel-inner.row.m-0
-            +slider-item(true, 'car')
-            +slider-item(false, 'butterfly')
-            +slider-item(false, 'library')
-        button.carousel-control-prev(data-bs-slide='prev' data-bs-target='#carouselControls__ID__' type='button')
-            span.carousel-control-prev-icon(aria-hidden='true')
-            span.visually-hidden Previous
-        button.carousel-control-next(data-bs-slide='next' data-bs-target='#carouselControls__ID__' type='button')
-            span.carousel-control-next-icon(aria-hidden='true')
-            span.visually-hidden Next
+    div.md-carousel
+        div.carousel.slide(id="carouselControls__ID__" data-bs-ride="carousel")
+            //- Carousel Items
+            div.carousel-inner.row.m-0
+                each slide in slides
+                    +slider-item(slide.active, slide.imgSrc)
+
+
+            //- Controls
+            div.carousel-actions
+                div.arrows
+                    button.carousel-control-prev.carousel-control(type="button" data-bs-target="#carouselControls__ID__" data-bs-slide="prev")
+                        span.carousel-control-prev-icon(aria-hidden="true")
+                            i.bi.bi-chevron-left
+                        span.visually-hidden Previous
+                    button.carousel-control-next.carousel-control(type="button" data-bs-target="#carouselControls__ID__" data-bs-slide="next")
+                        span.carousel-control-next-icon(aria-hidden="true")
+                            i.bi.bi-chevron-right
+                        span.visually-hidden Next
+                div.carousel-indicators.d-none.d-md-flex
+                    each slide, index in slides
+                        button(
+                            type="button"
+                            data-bs-target="#carouselControls__ID__"
+                            data-bs-slide-to=`${index}`
+                            class=(index === 0 ? 'active' : '')
+                            aria-current=(index === 0 ? 'true' : null)
+                            aria-label=`Slide ${index + 1}`
+                        )
+                button.carousel-pause-btn
+                    i.bi.bi-pause

@@ -8,9 +8,18 @@ html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-t
             //header
             header.ly-header(data-iwcm-write="doc_header")
                 include pagebuilder/section/header/header
+                include pagebuilder/section/navigation/navigation
                 include pagebuilder/section/breadcrumb/breadcrumb
             //main content
             main.ly-content-wrapper(data-iwcm-write="doc_data")
+                // banner
+                include pagebuilder/section/banner/images-grid-banner
+                // slider
+                include pagebuilder/section/slider/hp-slider-section
+                //terms and conditions
+                include pagebuilder/section/terms-and-conditions/terms-and-conditions
+                include pagebuilder/section/terms-and-conditions/terms-and-conditions-content-navigation
+                include pagebuilder/section/terms-and-conditions/base-info
                 //blog-detail
                 include pagebuilder/section/blog/blog-hero
                 include pagebuilder/section/blog/sections-navigator

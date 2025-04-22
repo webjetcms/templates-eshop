@@ -28,6 +28,9 @@ $(function () {
     initFilterSidenav();
     initAllRangeInputs();
     initSectionNavigationItems();
+    initVerticalSidenavs();
+    initCarouselFunc();
+    initNavSidenav();
     personSwitch.trigger('change');
 });
 
@@ -252,4 +255,83 @@ function initSectionNavigationItems() {
         }
     });
 }
+
+const initVerticalSidenavs = () => {
+    const sidenavs = document.querySelectorAll('.md-vertical-sidenav');
+
+    sidenavs.forEach(sidenav => {
+        sidenav.querySelectorAll('[data-toggle="sidenav-toggle"]').forEach(trigger => {
+            trigger.addEventListener('click', e => {
+                e.preventDefault();
+                const parent = trigger.closest('.nav-item');
+                parent.classList.toggle('open');
+            });
+        });
+    });
+};
+
+const initCarouselFunc = () => {
+    document.querySelectorAll('.carousel').forEach((carouselEl) => {
+        const carousel = new bootstrap.Carousel(carouselEl, {
+            interval: 3000,
+            wrap: true,
+            pause: false,
+            ride: 'carousel',
+        });
+
+        const pauseBtn = carouselEl.closest('.md-carousel')?.querySelector('.carousel-pause-btn');
+        let isPaused = false;
+
+        pauseBtn?.addEventListener('click', () => {
+            if (isPaused) {
+                carousel.cycle();
+                pauseBtn.innerHTML = '<i class="bi bi-pause"></i>';
+            } else {
+                carousel.pause();
+                pauseBtn.innerHTML = '<i class="bi bi-play"></i>';
+            }
+            isPaused = !isPaused;
+        });
+    });
+};
+
+function initNavSidenav() {
+    const navSidenav = document.querySelector('.md-navigation');
+    const navBtnOpen = document.querySelectorAll('.btn-hamburger');
+    const navBtnClose = document.querySelectorAll('.close-nav');
+    const bodyEl = document.body;
+
+    // Open nav sidebar
+    navBtnOpen.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navSidenav.classList.add('navigation-opened');
+            bodyEl.style.overflow = 'hidden';
+        });
+    });
+
+    // Close nav sidebar
+    navBtnClose.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeNav();
+        });
+    });
+
+    // Prevent inside clicks from closing nav
+    navSidenav.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function () {
+        closeNav();
+    });
+
+    function closeNav() {
+        navSidenav.classList.remove('navigation-opened');
+        bodyEl.style.overflow = '';
+    }
+}
+
 
