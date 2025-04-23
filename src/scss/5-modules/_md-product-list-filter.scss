@@ -1,49 +1,54 @@
+$t-left: left 0.3s ease-in-out;
+
 .md-product-list-filter {
-border-right: none;
-position: fixed;
-z-index: 1001;
-left: -100%;
-top: 0;
-bottom: 0;
-background: #fff;
-transition: left 0.3s ease-in-out;
-border-bottom-right-radius: 8px;
-display: flex;
-flex-direction: column;
-@media(max-width: $bp-mobile - 1) {
-width: calc(100% - 26px);
-}
-@media(min-width: $bp-mobile) {
-display: block;
-position: relative;
-z-index: 1;
-border-right: 1px solid $c-border;
-background: transparent;
-border-bottom-right-radius: 0;
-left: 0;
-}
-&.filter-opened {
-left: 0;
-transition: left 0.3s ease-in-out;
-}
-.filter-wrapper {
-padding: 26px 8px 26px;
-overflow-y: auto;
-@media(min-width: $bp-mobile) {
-overflow-y: unset;
-position: sticky;
-    top: 74px;
-padding: 26px 26px 26px 0;
-}
-}
-.filter-action {
-margin-top: auto;
-background: #fff;
-border-top: 1px solid $c-border;
-display: flex;
-padding: 16px;
-@media(min-width: $bp-mobile) {
-display: none;
-}
-}
+    border-right: none;
+    position: fixed;
+    z-index: 1001;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    transition: $t-left;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    @media(max-width: $bp-mobile - 1) {
+        width: calc(100% - 26px);
+    }
+    @media(min-width: $bp-mobile) {
+        display: block;
+        position: relative;
+        z-index: 1;
+        border-right: 1px solid $c-border;
+        background: transparent;
+        border-bottom-right-radius: 0;
+        left: 0;
+    }
+
+    &.filter-opened {
+        left: 0;
+        transition: $t-left;
+    }
+
+    .filter-wrapper {
+        padding: 26px 8px 26px;
+        overflow-y: auto;
+        @media(min-width: $bp-mobile) {
+            overflow-y: unset;
+            position: sticky;
+            top: 74px;
+            padding: 26px 26px 26px 0;
+        }
+    }
+
+    .filter-action {
+        margin-top: auto;
+        background: #fff;
+        border-top: 1px solid $c-border;
+        display: flex;
+        padding: 16px;
+        @media(min-width: $bp-mobile) {
+            display: none;
+        }
+    }
 }

@@ -1,10 +1,10 @@
 mixin slider-item(active, imgSrc)
     if active
         div.carousel-item.col-12.active.p-0
-            img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/templates/bare/bootstrap-bare/dist/assets/images/hp-slider/${imgSrc}.jpg`)
+            img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/assets/images/${imgSrc}.png`)
     else
         div.carousel-item.col-12.p-0
-            img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/templates/bare/bootstrap-bare/dist/assets/images/hp-slider/${imgSrc}.jpg`)
+            img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/assets/images/${imgSrc}.png`)
 
 mixin benefit(imgSrc, title, text)
     div.benefit-item.col-md-3
