@@ -1,0 +1,18 @@
+include ../../../mixins
+div.container
+    #main-slider.splide
+        .splide__track
+            div.splide__list.row
+                +product-gallery-item('/assets/images/hp-slider/butterfly.jpg', 'Slide 1')
+                +product-gallery-item('/assets/images/hp-slider/car.jpg', 'Slide 2')
+                +product-gallery-item('/assets/images/hp-slider/library.jpg', 'Slide 3')
+                +product-gallery-item('/assets/images/hp-slider/polynesia.jpg', 'Slide 4')
+
+    //- Thumbnail Slider
+    #thumbnail-slider.splide
+        .splide__track
+            div.splide__list.row
+                +product-gallery-item('/assets/images/hp-slider/butterfly.jpg', 'Slide 1')
+                +product-gallery-item('/assets/images/hp-slider/car.jpg', 'Slide 2')
+                +product-gallery-item('/assets/images/hp-slider/library.jpg', 'Slide 3')
+                +product-gallery-item('/assets/images/hp-slider/polynesia.jpg', 'Slide 4')

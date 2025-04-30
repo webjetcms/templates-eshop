@@ -12,6 +12,9 @@ html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-t
                 include pagebuilder/section/breadcrumb/breadcrumb
             //main content
             main.ly-content-wrapper(data-iwcm-write="doc_data")
+                //product detail
+                //include pagebuilder/section/products/gallery
+                include pagebuilder/section/products/detail
                 // banner
                 include pagebuilder/section/banner/images-grid-banner
                 // slider
@@ -46,8 +49,6 @@ html(class="pg-homepage" lang="sk-SK" data-th-lang="${ninja.temp.lngIso}" data-t
                 include pagebuilder/section/products/best-accessories
                 include pagebuilder/section/products/favourite
                 include pagebuilder/section/products/technologies
-                //product detail
-                include pagebuilder/section/products/detail
                 // product list with filter
                 include pagebuilder/section/products/list-with-filter
                 //include all sections to quickly see all options for layout and PB blocks

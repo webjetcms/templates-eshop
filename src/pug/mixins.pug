@@ -6,6 +6,10 @@ mixin slider-item(active, imgSrc)
         div.carousel-item.col-12.p-0
             img.d-block.w-100.fixedSize-1300-500-5(alt='...' src=`/assets/images/${imgSrc}.png`)
 
+mixin product-gallery-item(imgSrc, altName)
+    div.splide__slide.col-md-12
+        img(src=`${imgSrc}`, alt=`${altName}`)
+
 mixin benefit(imgSrc, title, text)
     div.benefit-item.col-md-3
         div.d-flex
