@@ -4,6 +4,10 @@
 @import "bootstrap/scss/bootstrap.scss";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+//Import SplideJs
+@import "@splidejs/splide/src/css/core";
+//@import "@splidejs/splide/src/css/themes/sea-green";
+
 //HELPERS
 @import "2-helpers/variables";
 :root {
@@ -77,6 +81,7 @@
 @import "5-modules/md-share-links";
 @import "5-modules/md-vertical-sidenav";
 @import "5-modules/md-carousel";
+@import "5-modules/md-product-gallery";
 
 //PAGES
 @import "6-pages/pg-homepage";
