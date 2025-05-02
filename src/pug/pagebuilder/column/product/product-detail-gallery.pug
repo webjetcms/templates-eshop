@@ -1,2 +1,27 @@
-div.md-product-detail-info.col-md-6
-    p TODO: Galeria
+include ../../../mixins
+
+div.col-md-6
+    div.md-product-gallery
+        #main-slider.splide
+            .splide__track
+                div.splide__list
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-1.png', 'Slide 1')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-2.png', 'Slide 2')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-3.png', 'Slide 3')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-4.png', 'Slide 4')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-5.png', 'Slide 5')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-6.png', 'Slide 5')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-7.png', 'Slide 5')
+
+        //- Thumbnail Slider
+        #thumbnail-slider.splide
+            .splide__track
+                div.splide__list
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-1.png', 'Slide 1')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-2.png', 'Slide 2')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-3.png', 'Slide 3')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-4.png', 'Slide 4')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-5.png', 'Slide 5')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-6.png', 'Slide 5')
+                    +product-gallery-item('/assets/images/gallery-placeholders/gallery-placeholder-7.png', 'Slide 5')
+

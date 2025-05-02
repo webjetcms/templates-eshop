@@ -4,6 +4,7 @@ window.$ = $;
 require("jquery.cookie");
 
 import Ninja from './global-functions';
+import { Splide } from '@splidejs/splide';
 window.Ninja = Ninja;
 
 const bootstrap = (window.bootstrap = require('bootstrap'));
@@ -18,6 +19,7 @@ $(function () {
         debug:false
     });
 
+
     initBsTooltipGlobal();
     initHeaderScroll();
     initShowBasket(basket);
@@ -31,6 +33,7 @@ $(function () {
     initVerticalSidenavs();
     initCarouselFunc();
     initNavSidenav();
+    initProductDetailGallery();
     personSwitch.trigger('change');
 });
 
@@ -332,6 +335,59 @@ function initNavSidenav() {
         navSidenav.classList.remove('navigation-opened');
         bodyEl.style.overflow = '';
     }
+}
+
+function initProductDetailGallery() {
+    const main = new Splide( '#main-slider', {
+        type       : 'fade',
+        heightRatio: 1,
+        pagination : false,
+        arrows     : true,
+        cover      : false,
+        rewind          : true,
+    } );
+
+    const thumbnails = new Splide( '#thumbnail-slider', {
+        rewind          : true,
+        fixedWidth      : 85,
+        fixedHeight     : 97,
+        isNavigation    : true,
+        gap             : 10,
+        focus           : 'center',
+        pagination      : false,
+        cover           : false,
+        arrows     : false,
+        dragMinThreshold: {
+            mouse: 4,
+            touch: 10,
+        },
+        breakpoints : {
+            991: {
+                fixedWidth  : 75,
+                fixedHeight : 97,
+            },
+        },
+    } );
+
+    thumbnails.on('mounted', function () {
+        const track = thumbnails.Components.Elements.track;
+        const list = thumbnails.Components.Elements.list;
+
+        if (list.scrollWidth <= track.clientWidth) {
+            thumbnails.options = {
+                drag: false,
+                arrows: false,
+                focus: false,
+                pagination: false,
+                isNavigation: true,
+            };
+            list.style.justifyContent = 'flex-start';
+        }
+    });
+
+    main.sync( thumbnails );
+    main.mount();
+    thumbnails.mount();
 }
 
 
