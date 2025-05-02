@@ -1,9 +1,16 @@
+
+
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 //HELPERS
 @import "2-helpers/variables";
+:root {
+    --bs-heading-color: var(--bs-dark);
+    --bs-card-border-color: #DEE2E6;
+    --btn-border-radius: 12px;
+}
 @import "2-helpers/functions";
 @import "2-helpers/mixins";
 @import "2-helpers/placeholders";
