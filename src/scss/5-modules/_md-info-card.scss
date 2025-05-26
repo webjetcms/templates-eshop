@@ -5,6 +5,18 @@
     color: $c-gray-800;
     border-radius: 8px;
     margin-bottom: 1rem;
+    &__blue {
+        background: $c-light-blue;
+    }
+    &__yellow {
+        background: $c-light-yellow;
+    }
+    &__red {
+        background: $c-light-red;
+    }
+    &__purple {
+        background: $c-light-purple;
+    }
     .info-card-body {
         padding: 32px;
     }
@@ -17,6 +29,9 @@
                 .info-card-text-wrapper {
                     width: 100%;
                     max-width: 730px;
+                    p {
+                        font-weight: 300;
+                    }
                 }
                 .info-card-image-wrapper {
                     width: 100%;

@@ -1,9 +1,8 @@
 @charset "UTF-8";
-$c-nav-border: #E3F1FF;
 .md-navigation {
     background-color: $c-nav-menu;
     padding: 18px 0;
-    border-bottom: 1px solid $c-nav-border;
+    border-bottom: 1px solid $c-light-blue;
 
     .nav-menu {
         display: flex;

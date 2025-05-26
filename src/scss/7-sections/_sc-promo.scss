@@ -1,8 +1,13 @@
 .sc-promo {
-    background: $c-box-bg;
+    background: $c-light-blue;
     padding: 40px 12px;
     h2 {
-        color: $c-secondary;
+        color: $c-primary;
         font-weight: 500;
+    }
+    .text-md-end {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
 }

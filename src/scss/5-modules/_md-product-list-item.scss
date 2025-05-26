@@ -5,6 +5,10 @@
     display: block;
 }
 .md-product-list-item {
+    &.card {
+        border-radius: 16px;
+        border: none;
+    }
     position: relative;
     border-color: $c-border;
     &__badges {
