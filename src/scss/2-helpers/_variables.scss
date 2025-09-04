@@ -1,18 +1,18 @@
 @charset "UTF-8";
 
 //WJ DIR
-$wj-install-name : "eshop";
-$wj-template-name : "bootstrap-eshop";
-$wj-assets : "/templates/#{$wj-install-name}/#{$wj-template-name}/dist/";
-$wj-images : "#{$wj-assets}assets/images/";
-$wj-fonts : "#{$wj-assets}assets/fonts/";
+$wj-install-name: "eshop";
+$wj-template-name: "bootstrap-eshop";
+$wj-assets: "/templates/#{$wj-install-name}/#{$wj-template-name}/dist/";
+$wj-images: "#{$wj-assets}assets/images/";
+$wj-fonts: "#{$wj-assets}assets/fonts/";
 
 //BREAKPOINT
-$bp-dinosaur : 576px;
-$bp-mobile : 768px;
-$bp-tablet : 992px;
-$bp-laptop : 1200px;
-$bp-desktop : 1600px;
+$bp-dinosaur: 576px;
+$bp-mobile: 768px;
+$bp-tablet: 992px;
+$bp-laptop: 1200px;
+$bp-desktop: 1600px;
 
 //FONTS
 $f-primary: "Open Sans", sans-serif;
@@ -45,16 +45,23 @@ $c-nav-menu: #f9faff;
 $c-vertical-nav-submenu: #f8f9fb;
 $c-nav-link: #404a5c;
 $c-gray-base: #ccc;
+$c-gray-indicators: #EBEBEB;
 $c-nav-link-hover: #f2f2f2;
 $c-dropdown-link: #555;
 $c-light-blue: #E3F1FF;
 $c-light-yellow: #FFF3E3;
 $c-light-red: #FFE3E3;
 $c-light-purple: #E5E3FF;
-
+$c-theme-light: #F8F9FA;
+$c-eshop-yellow: #ffc107;
+$c-eshop-blue: #0DCAF0;
+$card-title-color: #212529;
 
 //others
 $t-left: left 0.3s ease-in-out;
+
+//containers
+
 
 // components color pallete
 

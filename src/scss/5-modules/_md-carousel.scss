@@ -22,8 +22,11 @@
         position: relative;
         display: block;
         button {
+            height: 4px;
+            margin-left: 4px;
+            margin-right: 4px;
             opacity: 1;
-            background: $c-vertical-nav-submenu;
+            background: $c-gray-indicators;
             border: none;
             &.active {
                 background: $c-primary;
@@ -39,7 +42,7 @@
         top: 0;
         bottom: 0;
         border-radius: 4px;
-        background: $c-vertical-nav-submenu;
+        background: $c-theme-light;
         opacity: 1;
         display: flex;
         justify-content: center;
@@ -82,7 +85,7 @@
                 top: 0;
                 bottom: 0;
                 border-radius: 4px;
-                background: $c-vertical-nav-submenu;
+                background: $c-theme-light;
                 opacity: 1;
                 display: flex;
                 justify-content: center;

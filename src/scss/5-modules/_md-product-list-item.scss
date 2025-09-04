@@ -4,33 +4,45 @@
     font-size: 16px;
     display: block;
 }
+
 .md-product-list-item {
+    position: relative;
+    border-color: $c-border;
+
     &.card {
         border-radius: 16px;
         border: none;
     }
-    position: relative;
-    border-color: $c-border;
+
     &__badges {
         position: absolute;
-        top: 15px;
-        left: 15px;
+        top: 16px;
+        left: 16px;
         display: flex;
         flex-wrap: wrap;
         z-index: 1;
         flex-direction: column;
+
+        @media screen and (min-width: $bp-tablet) {
+            top: 16px;
+            left: 32px;
+        }
+
         .md-badge {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
     }
+
     &__image {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
             width: auto;
         }
     }
+
     &__options {
         position: relative;
         margin-bottom: -40px;
@@ -38,5 +50,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    &__body {
+        padding: 32px;
+
+        .card-text {
+            margin-bottom: 2rem;
+        }
     }
 }

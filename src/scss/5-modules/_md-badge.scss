@@ -11,14 +11,15 @@
     text-decoration-skip-ink: none;
     &.md-badge--bigger {
         font-size: 15px;
+        line-height: 15px;
         padding: 5.25px 9.75px 5.25px 9.75px;
     }
     &--new {
-        background: #FFC107;
+        background: $c-eshop-yellow;
         color: $c-body;
     }
     &--favourite {
-        background: #0DCAF0;
+        background: $c-eshop-blue;
         color: $c-body;
     }
 }

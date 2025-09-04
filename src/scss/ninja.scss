@@ -1,6 +1,10 @@
-
+// Import Bootstrap customization
+@import "2-helpers/bootstrap-custom-variables.scss";
 
 // Import Bootstrap
+@import "bootstrap/scss/_functions.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "2-helpers/bootstrap-custom-maps.scss";
 @import "bootstrap/scss/bootstrap.scss";
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+//colors
+$black: #161616;
+$gray-100: #F3F3F6;
+$gray-200: #DDDFE6;
+$gray-300: #C2C6D2;
+$gray-400: #A2A8BA;
+$gray-500: #868EA5;
+$gray-600: #6C757D;
+$gray-700: #4D5262;
+$gray-800: #353944;
+$gray-900: #23262E;
+$blue: #0063FB;
+$green: #007F5E;
+$cyan: #D90072;
+$yellow: #8E6A00;
+$red: #E00028;
+$border-color: $gray-400;
+$code-color: $cyan;
+$body-color: $gray-800;
+$body-secondary-color: $gray-600;
+
+//spacings
+$input-btn-padding-y: .45rem;
+$input-btn-padding-x: .9rem;
+$input-btn-padding-y-sm: .3rem;
+$input-btn-padding-x-sm: .6rem;
+
+//cards
+$card-title-spacer-y: 1rem;
