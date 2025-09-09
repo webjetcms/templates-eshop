@@ -1,13 +1,24 @@
 .sc-promo {
     background: $c-light-blue;
-    padding: 40px 12px;
+    padding: 40px 0;
+
     h2 {
         color: $c-primary;
         font-weight: 500;
+        font-size: 2rem;
+
+        @media (max-width: $bp-mobile) {
+            margin-bottom: 10px;
+        }
     }
+
     .text-md-end {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @media (max-width: $bp-mobile) {
+            justify-content: start;
+        }
     }
 }

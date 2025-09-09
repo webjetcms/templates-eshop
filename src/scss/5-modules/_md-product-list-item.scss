@@ -11,7 +11,11 @@
 
     &.card {
         border-radius: 16px;
-        border: none;
+        border: 1px solid $c-border;
+
+        @media screen and (min-width: $bp-mobile) {
+            border: none;
+        }
     }
 
     &__badges {
@@ -50,13 +54,57 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        .form-select {
+            border-color: $c-gray-400;
+            border-radius: 4px;
+        }
     }
 
     &__body {
-        padding: 32px;
+        @media screen and (min-width: $bp-mobile) {
+            padding: 32px;
+        }
+
+        .card-title {
+            @media screen and (max-width: $bp-mobile) {
+                font-size: 16px;
+            }
+        }
 
         .card-text {
-            margin-bottom: 2rem;
+            @media screen and (min-width: $bp-mobile) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .md-number-picker {
+            @media screen and (max-width: $bp-mobile) {
+                display: none;
+            }
+        }
+
+        .h4 {
+            @media screen and (max-width: $bp-mobile) {
+                font-size: 16px;
+            }
+        }
+
+        .text-success,
+        .text-secondary {
+            @media screen and (max-width: $bp-mobile) {
+                font-size: 14px;
+            }
+        }
+
+        .add-to-cart {
+            @media screen and (max-width: $bp-mobile) {
+                width: 100%;
+                padding: 8px;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+            }
         }
     }
 }

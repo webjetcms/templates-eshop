@@ -1,9 +1,19 @@
 .md-product-list-description {
-    padding-top: 15px;
+    padding-top: 12px;
+
+    @media screen and (max-width: $bp-mobile) {
+        padding-bottom: 0;
+    }
+
     h2 {
         font-size: 32px;
         margin-bottom: 20px;
+
+        @media screen and (max-width: $bp-mobile) {
+            margin-bottom: 16px;
+        }
     }
+
     p {
         font-weight: 300;
         font-size: 20px;

@@ -50,7 +50,11 @@ body {
 }
 
 section {
-    padding: 30px 0 0;
+    padding: 20px 0;
+
+    @media (min-width: $bp-mobile) {
+        padding: 30px 0;
+    }
 }
 
 .divider {

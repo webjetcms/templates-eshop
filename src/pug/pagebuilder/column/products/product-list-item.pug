@@ -1,4 +1,4 @@
-div.col-md-6.col-xl-4.mb-4
+div.col-6.col-xl-4.mb-4
     div.card.md-product-list-item
         // Štítky
         div.md-product-list-item__badges
@@ -11,7 +11,7 @@ div.col-md-6.col-xl-4.mb-4
             img.card-img-top.p-3(src="/assets/images/iphone-big.png" alt="Produktový obrázok")
 
         // Obsah karty
-        div.md-product-list-item__options
+        div.md-product-list-item__options.d-none.d-md-flex
             div.mb-3.d-flex.justify-content-between.align-items-center
                 // Výber veľkosti a farby
                 select.form-select.me-2(aria-label="Veľkosť")
@@ -30,18 +30,19 @@ div.col-md-6.col-xl-4.mb-4
                 | Dvanásta generácia obľúbeného smartfónu vás svojou výbavou určite nesklame. Výkonný procesor zvládne aj náročné operácie v priebehu okamihu a navyše je energeticky nenáročný.
 
             // Cena a stav skladom
-            div.d-flex.justify-content-between.align-items-center.mb-3
-                span.h4.fw-bold.text-dark.mb-0 1 089,00 €
+            div.d-flex.justify-content-between.align-items-md-center.mb-3.flex-column.flex-md-row
+                span.h4.text-dark.mb-0 1 089,00 €
                 span.text-success Na sklade >5 ks
+                //span.text-secondary Nedostupné
 
             // Tlačidlá
             div.d-flex.justify-content-between.align-items-center
-                div.d-flex.align-items-center
+                div.d-flex.align-items-center.w-100
                     include number-picker
 
-                    button.btn.btn-primary.me-2
-                        i.bi.bi-cart-plus
+                    button.btn.btn-primary.add-to-cart.me-md-2
+                        i.bi.bi-cart
                         |  Do košíka
-                div
+                div.d-none.d-md-block
                     button.btn.btn-outline-border.just-icon
                         i.bi.bi-heart

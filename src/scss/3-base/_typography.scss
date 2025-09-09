@@ -7,7 +7,13 @@ h4,
 h5,
 h6 {}
 
-h1 {}
+h1 {
+    font-size: 2rem;
+
+    @media (min-width: $bp-mobile) {
+        font-size: 2.5rem;
+    }
+}
 h2 {}
 h3 {}
 h4 {}
