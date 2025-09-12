@@ -7,6 +7,7 @@
         }
     }
 }
+
 .md-tabs {
     .tabsBox {
         .nav-item {
@@ -15,19 +16,40 @@
             }
         }
     }
+
     .tab-content {
         .pb-tab-title {
             display: none;
             padding: 15px 0;
             border: 1px dashed red;
+
             h3 {
                 font-size: 15px;
                 color: red;
             }
         }
+
         .column-content {
             min-height: 100px;
             padding: 20px 0;
+        }
+    }
+}
+
+.nav-tabs {
+    border: none;
+
+    .nav-item {
+        .nav-link {
+            padding: 16px 32px;
+            color: $c-primary;
+            border-bottom: 1px solid $c-border;
+
+            &.active {
+                color: $gray-700;
+                border-color: $c-border;
+                border-bottom: 1px solid $nav-tabs-link-active-bg;
+            }
         }
     }
 }

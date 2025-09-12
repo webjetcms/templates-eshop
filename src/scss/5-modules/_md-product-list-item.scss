@@ -44,6 +44,7 @@
 
         img {
             width: auto;
+            max-width: 100%;
         }
     }
 
@@ -58,6 +59,7 @@
         .form-select {
             border-color: $c-gray-400;
             border-radius: 4px;
+            color: $card-title-color;
         }
     }
 
@@ -104,6 +106,30 @@
                 display: flex;
                 justify-content: center;
                 gap: 8px;
+            }
+        }
+    }
+
+    &.full-width {
+        .md-product-list-item__body {
+            .card-title {
+                font-size: 20px;
+            }
+
+            .h4 {
+                font-size: 24px;
+            }
+
+            .text-success {
+                @media screen and (max-width: $bp-mobile) {
+                    font-size: 16px;
+                }
+            }
+
+            .md-number-picker {
+                @media screen and (max-width: $bp-mobile) {
+                    display: block;
+                }
             }
         }
     }

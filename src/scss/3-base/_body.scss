@@ -7,11 +7,13 @@ body {
     min-width: 360px;
     color: $c-body;
     background: #F8FAFF;
+
     .scroll-d-visible {
         height: 0;
         opacity: 0;
         overflow: hidden;
     }
+
     &.scroll-down {
         .scroll-d-hidden {
             height: 0;
@@ -19,33 +21,38 @@ body {
             overflow: hidden;
             padding: 0;
         }
+
         .scroll-d-visible {
             height: auto;
             opacity: 1;
             overflow: visible;
         }
+
         .md-header-main__search {
             margin-top: 0;
         }
+
         .search-col {
             flex: 0 0 auto;
             width: 83.33333333%;
             margin: 0;
             order: 3 !important;
         }
+
         .js__btn-basket {
             padding: .375rem .75rem;
         }
     }
+
     &.body-overlay {
-    &:before {
-    content: '';
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    z-index: 1000;
-    transition: opacity 0.3s ease-in-out;
-    }
+        &:before {
+            content: '';
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            position: fixed;
+            z-index: 1000;
+            transition: opacity 0.3s ease-in-out;
+        }
     }
 }
 
@@ -61,4 +68,21 @@ section {
     height: 1px;
     background: $c-border;
     width: 100%;
+}
+
+.container {
+    .container {
+        padding: 0;
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+
+            > [class*="col-"],
+            .col {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    } 
 }
