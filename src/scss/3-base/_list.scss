@@ -30,7 +30,7 @@ ol {
             &:before{
                 background: $c-primary-200;
                 border-radius: 100%;
-                color: $c-primary;
+                color: $c-primary-700;
                 content: counter(ordered);
                 counter-increment: ordered;
                 display: flex;
@@ -40,6 +40,12 @@ ol {
                 justify-content: center;
                 align-items: center;
                 margin-right: 16px;
+            }
+
+            &:last-of-type {
+                p {
+                    margin-bottom: 0;
+                }
             }
         }
     }

@@ -1,3 +1,51 @@
 .modal {
     z-index: 9999;
+
+    &#returnOfGoodsModal,
+    &#complaintModal {
+        width: 100%;
+        max-width: 546px;
+        margin: 0 auto;
+        padding: 0;
+
+        .modal-dialog {
+            @media screen and (max-width: $bp-mobile) {
+                margin: 0;
+            }
+
+            .modal-content {
+                @media screen and (max-width: $bp-mobile) {
+                    border: none;
+                    border-radius: 0;
+                }
+            }
+
+            .modal-header {
+                @media screen and (max-width: $bp-mobile) {
+                    padding: 24px 12px 0 12px;
+                }
+
+                .btn-close {
+                    top: 24px;
+                    right: 12px;
+                }
+
+                .modal-title {
+                    line-height: 1.2;
+                }
+            }
+
+            .modal-body {
+                @media screen and (max-width: $bp-mobile) {
+                    padding: 24px 12px;
+                }
+            }
+
+            .modal-footer {
+                @media screen and (max-width: $bp-mobile) {
+                    padding: 0 12px 24px 12px;
+                }
+            }
+        }
+    }
 }

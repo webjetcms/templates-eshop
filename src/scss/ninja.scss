@@ -17,7 +17,7 @@
 :root {
     --bs-heading-color: var(--bs-dark);
     --bs-card-border-color: #DEE2E6;
-    --btn-border-radius: 12px;
+    --btn-border-radius: 4px;
 }
 @import "2-helpers/functions";
 @import "2-helpers/mixins";
@@ -102,6 +102,7 @@
 @import "7-sections/sc-commercial";
 @import "7-sections/sc-footer";
 @import "7-sections/sc-complaint";
+@import "7-sections/sc-contact";
 
 //VIEWS
 @import "8-views/no-js";

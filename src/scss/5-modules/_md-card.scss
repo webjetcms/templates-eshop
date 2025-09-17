@@ -26,12 +26,15 @@
 
         &-with-bg-img {
             color: $c-gray-700;
-            height: 100%;
             background-image: url("#{$wj-images}card-symbol-bg.png");
             background-color: $c-gray-100;
             background-size: 140px auto;
             background-position: top right;
             background-repeat: no-repeat;
+
+            @media screen and (min-width: $bp-mobile) {
+                height: 100%;
+            }
 
             h3 {
                 color: $c-gray-800;
@@ -68,27 +71,27 @@
     }
 
     &__team-member {
-        background: $c-gray-100;
+        background: $c-theme-light;
         border: 1px solid $c-border;
         border-radius: 8px;
         display: flex;
         flex-direction: column;
         padding: 24px;
-        margin-top: 90px;
+        margin-top: 66px;
 
         .image-wrapper {
             display: flex;
             justify-content: center;
             width: 100%;
             margin-bottom: 1.5rem;
-            margin-top: -90px;
+            margin-top: -66px;
         }
 
         .card-content {
             text-align: center;
 
             h2 {
-                color: $c-primary;
+                color: $theme-blue;
                 margin-bottom: 1rem;
             }
 
