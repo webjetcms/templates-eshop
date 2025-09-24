@@ -171,11 +171,16 @@
 body.default,
 body.scroll-up {
     .md-basket {
-        right: 55px;
-        max-width: calc(100% - 55px);
+        // right: 55px;
+        // max-width: calc(100% - 55px);
         top: 45px;
+
         @media  screen and (min-width: $bp-laptop) {
             max-width: 356px;
+        }
+
+        &:after {
+            right: 96px;
         }
     }
 }

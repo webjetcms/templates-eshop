@@ -1,22 +1,22 @@
 .md-share-links {
     padding: 24px 0;
-    @media(max-width: $bp-tablet) {
-        padding: 16px 0;
-    }
     border-top: 1px solid $c-border;
     border-bottom: 1px solid $c-border;
     display: flex;
     flex-direction: row;
     align-items: center;
+
     & > p {
-        font-weight: bold;
+        font-weight: 500;
         margin: 0;
         padding-right: 16px;
     }
+
     .links {
         display: flex;
         flex-direction: row;
         gap: 16px;
+
         a {
             display: flex;
             align-items: center;

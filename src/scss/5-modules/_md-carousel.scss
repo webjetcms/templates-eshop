@@ -1,38 +1,47 @@
 .md-carousel {
     .carousel-inner {
         border-radius: 16px;
+
         .carousel-item {
             position: relative;
             max-height: 480px;
-            @media (max-width: $bp-mobile) {
-                min-height: 300px;
-            }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-        }
+            height: 480px;
 
+            @media (max-width: $bp-mobile) {
+                max-height: 190px;
+                height: 190px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
+
     .carousel-indicators {
         margin: 0;
         inset: 0;
         align-items: flex-end;
         position: relative;
         display: block;
+
         button {
+            width: 38px;
             height: 4px;
             margin-left: 4px;
             margin-right: 4px;
             opacity: 1;
             background: $c-gray-indicators;
             border: none;
+
             &.active {
                 background: $c-primary;
             }
         }
     }
+
     .carousel-pause-btn {
         width: 38px;
         height: 38px;
@@ -49,33 +58,40 @@
         align-items: center;
         border: none;
         transition: all 0.2s ease-in-out;
+
         & > span {
             background: none;
             display: flex;
             justify-content: center;
             align-items: center;
+
             i {
                 color: $c-gray-900;
             }
         }
+
         &:hover {
             transition: all 0.2s ease-in-out;
             background: $c-primary;
+
             i {
                 color: $c-white;
             }
         }
     }
+
     .carousel-actions {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin: 16px 0;
         align-items: center;
+
         .arrows {
             display: flex;
             flex-direction: row;
             gap: 16px;
+
             .carousel-control {
                 width: 38px;
                 height: 38px;
@@ -90,18 +106,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 & > span {
                     background: none;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     i {
                         color: $c-gray-900;
                     }
                 }
+
                 &:hover {
                     transition: all 0.2s ease-in-out;
                     background: $c-primary;
+
                     i {
                         color: $c-white;
                     }
@@ -112,5 +132,4 @@
 
         }
     }
-
 }

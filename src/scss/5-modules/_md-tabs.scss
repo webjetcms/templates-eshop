@@ -39,11 +39,19 @@
 .nav-tabs {
     border: none;
 
+    @media screen and (max-width: $bp-mobile) {
+        border-bottom: 1px solid $c-border;
+    }
+
     .nav-item {
         .nav-link {
             padding: 16px 32px;
             color: $c-primary;
             border-bottom: 1px solid $c-border;
+
+            @media screen and (max-width: $bp-mobile) {
+                padding: 8px 16px;
+            }
 
             &.active {
                 color: $gray-700;
