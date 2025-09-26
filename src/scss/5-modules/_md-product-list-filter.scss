@@ -7,7 +7,7 @@ $t-left: left 0.3s ease-in-out;
     left: -100%;
     top: 0;
     bottom: 0;
-    background: #fff;
+    background: $c-white;
     transition: $t-left;
     border-bottom-right-radius: 8px;
     display: flex;
@@ -43,7 +43,7 @@ $t-left: left 0.3s ease-in-out;
 
     .filter-action {
         margin-top: auto;
-        background: #fff;
+        background: $c-white;
         border-top: 1px solid $c-border;
         display: flex;
         padding: 16px;

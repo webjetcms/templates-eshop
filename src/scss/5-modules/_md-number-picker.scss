@@ -2,24 +2,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid $c-border;
-    border-radius: 16px;
+    border: 1px solid $c-gray-400-new;
+    border-radius: 3px;
     padding: 0;
     width: auto;
+
     button {
         background-color: transparent;
         border: none;
-        padding: 7px 10px;
+        padding: 7px 4px 7px 9px;
+
         i {
-            font-size: 14px;
+            font-size: 15px;
             color: $c-body;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.plus {
+            padding: 7px 9px 7px 4px;
         }
     }
+
     input {
         border: none;
         width: 20px;
+        max-width: 28px;
         text-align: center;
-        font-size: 1rem;
+        font-size: 14px;
         font-weight: 400;
         color: $c-secondary;
     }

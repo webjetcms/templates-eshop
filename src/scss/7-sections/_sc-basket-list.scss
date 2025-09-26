@@ -1,0 +1,25 @@
+.sc-basket-list {
+    .md-basket__content__item {
+        padding: 24px 0;
+        
+        @media screen and (max-width: $bp-mobile) {
+            align-items: start;
+        }
+
+        &__image {
+            width: 60px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__info {
+            &__title {
+                font-weight: 500;
+                margin-bottom: 9px;
+                padding-right: 49px;
+            }
+        }
+    }
+}

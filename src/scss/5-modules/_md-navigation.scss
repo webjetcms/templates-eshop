@@ -48,7 +48,7 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                background-color: #ffffff;
+                background-color: $c-white;
                 border: 1px solid $c-gray-base;
                 padding: 10px 0;
                 min-width: 180px;
@@ -94,7 +94,7 @@
         width: 100%;
         max-width: 320px;
         height: 100vh;
-        background: #fff;
+        background: $c-white;
         padding: 30px 20px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         transition: left 0.3s ease-in-out;

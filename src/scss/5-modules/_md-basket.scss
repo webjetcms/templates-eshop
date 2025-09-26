@@ -1,5 +1,5 @@
 .md-basket {
-    background: #fff;
+    background: $c-white;
     border-radius: 8px;
     display: none;
     padding: 24px;
@@ -10,15 +10,18 @@
     transform: translateY(15px);
     right: 0;
     max-width: 100%;
+
     @media  screen and (min-width: $bp-laptop) {
         max-width: 356px;
     }
+
     &.show {
         display: block;
     }
+
     &:after {
         border: 15px solid transparent;
-        border-bottom: 15px solid #ffffff;
+        border-bottom: 15px solid $c-white;
         border-top: none;
         content: " ";
         position: absolute;
@@ -26,80 +29,92 @@
         top: -12px;
         filter: drop-shadow(0px -6px 4px rgba(0, 0, 0, 0.07));
     }
+
     &__header {
         border-bottom: 1px solid $c-border;
-        padding-bottom: 20px;
-        &__title {
-            margin-bottom: 0;
-        }
     }
-    &__empty {
-        &__text {
-            margin-bottom: 0;
-        }
-    }
+
     &__content {
         &__item {
             display: flex;
             padding: 16px;
+            align-items: center;
             border-bottom: 1px solid $c-border;
             position: relative;
+
             &:last-child {
                 border-bottom: none;
             }
+
             &__image {
                 margin-right: 16px;
+                width: 96px;
+                height: 96px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
                 img {
                     max-width: 67px;
+                    max-height: 80px;
                 }
             }
+
             &__info {
                 width: 100%;
                 display: block;
+
                 @media screen and (min-width: $bp-laptop) {
                     display: flex;
                     align-items: center;
                     gap: 1rem;
                     justify-content: space-between;
                 }
+
                 &__wrapper {
                     display: flex;
                     justify-content: space-between;
                     align-items: baseline;
                 }
+
                 &__title {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 24px;
-                    padding-right: 20px;
+                    margin-bottom: 12px;
+
                     @media screen and (min-width: $bp-laptop) {
                         max-width: 38%;
                     }
                 }
+
                 &__price {
                     font-size: 16px;
                     font-weight: 700;
                     line-height: 24px;
-                    @media screen and (min-width: $bp-laptop) {
-                        margin-left: 20px;
-                    }
+                    margin-bottom: 0;
                 }
+
                 &__stock {
                     color: $c-success;
+                    line-height: 1.5;
+                    margin-bottom: 12px;
                 }
             }
+
             &__remove {
                 position: absolute;
-                right: 16px;
-                top: 16px;
+                right: 0;
+                top: 24px;
                 cursor: pointer;
-                background: $c-light;
+                background: $c-theme-light;
                 width: 31px;
                 height: 31px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 color: $c-body;
+
                 @media screen and (min-width: $bp-laptop) {
                     position: relative;
                     right: 0;
@@ -109,57 +124,100 @@
                     margin-top: auto;
                     margin-bottom: auto;
                 }
+
                 i {
                     font-size: 24px;
                 }
             }
+
             &--stock {
                 .md-basket__content__item {
                     &__image {
                         img {
                             max-height: 50px;
-                            max-width: none;
+                            max-width: 100%;
                         }
                     }
                 }
+
                 &:last-child {
                     border-bottom: 1px solid $c-border;
                 }
             }
         }
+
         &__summary {
-            padding: 25px 0 0;
+            padding: 16px 0 0;
+
             &__total {
                 display: flex;
                 justify-content: space-between;
+
                 p {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 21px;
                     color: $c-secondary;
+                    margin-bottom: 4px;
                 }
+
                 &--vat {
                     display: flex;
                     justify-content: space-between;
+
                     p {
                         font-size: 20px;
                         font-weight: 700;
                         line-height: 24px;
+
                         &.price {
                             color: $c-success
                         }
                     }
                 }
             }
+
             &__checkout {
                 width: 100%;
             }
         }
+
         &__items.dialog {
             height: 310px;
             overflow-y: auto;
+            padding-right: 8px;
+
+            /* Custom scrollbar - START */
+            @supports not selector(::-webkit-scrollbar) {
+                * {
+                    scrollbar-color: $c-border $c-white;
+                    scrollbar-width: thin;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $c-border;
+                border-radius: 4px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $c-white;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+            /* Custom scrollbar - END */
+
             .md-basket__content__item__info {
                 display: block;
+
                 &__title {
                     max-width: 100%;
                 }

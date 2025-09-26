@@ -1,8 +1,8 @@
 div#basket.md-basket
-    div.md-basket__header
-        h6.md-basket__header__title 3 ks v nákupnom košíku
     //div.md-basket__empty
-    //    p.md-basket__empty__text Váš nákupný košík je prázdny
+    //    p.md-basket__empty__text.mb-0 Váš nákupný košík je prázdny
+    div.md-basket__header
+        h6.md-basket__header__title.mb-3 3 ks v nákupnom košíku
     div.md-basket__content
         div.md-basket__content__items.dialog
             include ./basket-item
@@ -18,4 +18,4 @@ div#basket.md-basket
                 p.price 3 119,20 €
             button.btn.btn-success.md-basket__content__summary__checkout(type="button")
                 | Prejsť do košíka
-                i.bi.bi-arrow-right
+                i.bi.bi-chevron-right

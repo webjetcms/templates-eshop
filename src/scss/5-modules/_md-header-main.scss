@@ -22,7 +22,7 @@
             top: -10px;
             right: -10px;
             background: $c-danger;
-            color: #fff;
+            color: $c-white;
             padding: 2px 8px;
             border-radius: 50%;
             font-size: 12px;
@@ -38,7 +38,7 @@
             padding: 3px;
             border: 1px solid #CED4DA;
             border-radius: 16px;
-            background: #fff;
+            background: $c-white;
             &.input-group {
                 .btn {
                     font-size: 18px;
